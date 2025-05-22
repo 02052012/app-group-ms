@@ -1,39 +1,17 @@
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>App Group MS - Login</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body { font-family: sans-serif; background: #f2f2f2; text-align: center; padding: 50px; }
-    input { margin: 10px auto; padding: 10px; width: 80%; font-size: 16px; }
-    button { padding: 10px 20px; font-size: 16px; background-color: #800000; color: #fff; border: none; cursor: pointer; }
-    .box { background: white; padding: 30px; border-radius: 8px; display: inline-block; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>App Group MS</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="box">
-    <h2>Login - App Group MS</h2>
-    <input type="text" id="login" placeholder="Usuário"><br>
-    <input type="password" id="senha" placeholder="Senha"><br>
-    <button onclick="entrar()">Entrar</button>
-    <p id="msg" style="color: red;"></p>
-  </div>
-  <script>
-    function entrar() {
-      const user = document.getElementById('login').value.trim().toLowerCase();
-      const senha = document.getElementById('senha').value.trim();
-
-      const lojas = ["batel", "cabral", "mueller", "palladium", "scavollo", "sheridans"];
-      if (lojas.includes(user) && senha === "1234") {
-        window.location.href = "pedido_loja.html";
-      } else if (user === "compras" && senha === "admin") {
-        window.location.href = "painel_compras.html";
-      } else {
-        document.getElementById("msg").innerText = "Usuário ou senha inválidos";
-      }
-    }
-  </script>
+    <div class="container">
+        <h1>App Group MS</h1>
+        <a class="button" href="pedido_loja.html">Acesso Loja</a>
+        <a class="button" href="painel_compras.html">Acesso Compras</a>
+    </div>
 </body>
 </html>

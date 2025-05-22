@@ -1,28 +1,31 @@
 
 <!DOCTYPE html>
-<html><head><meta charset='utf-8'><title>Pedir Produtos</title></head>
-<body style="font-family: sans-serif; padding: 20px;">
-  <h2>Pedido - Loja</h2>
-  <form id="formulario">
-    <h3>Carnes</h3>
-    Contrafilé: <input type="number" name="Contrafile"><br>
-    Costela: <input type="number" name="Costela"><br>
-    <h3>Frango</h3>
-    Filé de Frango: <input type="number" name="File de Frango"><br>
-    <br>
-    <button type="button" onclick="salvarEPassar()">Avançar</button>
-  </form>
-<script>
-function salvarEPassar() {
-  const dados = {};
-  const form = document.getElementById("formulario");
-  Array.from(form.elements).forEach(el => {
-    if (el.name && el.value && parseFloat(el.value) > 0) {
-      dados[el.name] = el.value;
-    }
-  });
-  localStorage.setItem("pedidoMS", JSON.stringify(dados));
-  window.location.href = "resumo_pedido.html";
-}
-</script>
-</body></html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Pedido - Loja</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h2>Pedido da Loja</h2>
+        <form id="pedidoForm">
+            <label>Loja:
+                <select name="loja" required>
+                    <option>Mustang Batel</option>
+                    <option>Mustang Cabral</option>
+                    <option>Mustang Mueller</option>
+                    <option>Mustang Palladium</option>
+                    <option>Scavollo</option>
+                    <option>Sheridan's</option>
+                </select>
+            </label>
+            <label>Filé de Frango: <input type="number" name="frango" placeholder="kg"></label>
+            <label>Costela: <input type="number" name="costela" placeholder="kg"></label>
+            <label>Contrafilé: <input type="number" name="contra" placeholder="kg"></label>
+            <button type="submit">Avançar</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,22 +1,21 @@
 
 <!DOCTYPE html>
-<html><head><meta charset='utf-8'><title>Painel de Compras</title></head>
-<body style="font-family: sans-serif; padding: 20px;">
-  <h2>Painel de Compras</h2>
-  <div id="painel"></div>
-<script>
-const dados = JSON.parse(localStorage.getItem("pedidoEnviadoMS") || "{}");
-const painel = document.getElementById("painel");
-if (Object.keys(dados).length === 0) {
-  painel.innerHTML = "<p>Nenhum pedido disponível.</p>";
-} else {
-  const ul = document.createElement("ul");
-  for (const [produto, qtd] of Object.entries(dados)) {
-    const li = document.createElement("li");
-    li.textContent = `${produto}: ${qtd}`;
-    ul.appendChild(li);
-  }
-  painel.appendChild(ul);
-}
-</script>
-</body></html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Painel de Compras</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h2>Painel do Comprador</h2>
+        <p>Aqui aparecerão os pedidos feitos por loja</p>
+        <ul>
+            <li>Mustang Batel - Aguardando</li>
+            <li>Mustang Cabral - Em Cotação</li>
+            <li>Mustang Mueller - Aguardando</li>
+        </ul>
+    </div>
+</body>
+</html>
