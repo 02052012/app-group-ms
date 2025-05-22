@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>Pedidos</title>
+<script>
+function enviarPedido() {
+  const pedido = {
+    loja: "Mustang Mueller",
+    produtos: [
+      { nome: "Maionese 1,1kg", quantidade: document.getElementById("maionese").value },
+      { nome: "Batata Congelada 2kg", quantidade: document.getElementById("batata").value }
+    ],
+    status: "Aguardando confirmação"
+  };
+  localStorage.setItem("pedidoMueller", JSON.stringify(pedido));
+  alert("Pedido enviado com sucesso!");
+  window.location.href = "status.html";
+}
+</script>
+</head>
+<body>
+<h2>Pedido Consolidado</h2>
+<label>Maionese 1,1kg:</label><input type="number" id="maionese"><br>
+<label>Batata Congelada 2kg:</label><input type="number" id="batata"><br>
+<button onclick="enviarPedido()">Enviar Pedido</button>
+</body></html>

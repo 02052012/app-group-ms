@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>Compras</title>
+<script>
+window.onload = function() {
+  const pedido = JSON.parse(localStorage.getItem("pedidoMueller"));
+  const container = document.getElementById("dados");
+  if (pedido) {
+    pedido.produtos.forEach(p => {
+      if (p.quantidade > 0) {
+        const linha = document.createElement("div");
+        linha.innerText = pedido.loja + " - " + p.nome + ": " + p.quantidade + " unidades [" + pedido.status + "]";
+        container.appendChild(linha);
+      }
+    });
+  }
+}
+</script>
+</head>
+<body>
+<h2>Painel de Compras</h2>
+<div id="dados"></div>
+</body></html>
