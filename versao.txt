@@ -1,1 +1,1 @@
-Versão com login validado e fluxo loja > compras
+Fluxo completo: preencher, revisar e enviar pedido

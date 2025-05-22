@@ -1,10 +1,28 @@
 
-    <!DOCTYPE html>
-    <html><head><meta charset='UTF-8'><title>Pedido</title></head>
-    <body style='font-family: sans-serif; padding: 20px;'>
-      <h2>Novo Pedido</h2>
-      <label>Produto:</label><input type='text'><br><br>
-      <label>Quantidade:</label><input type='number'><br><br>
-      <a href='status.html'><button>Enviar Pedido</button></a>
-    </body></html>
-    
+<!DOCTYPE html>
+<html><head><meta charset='utf-8'><title>Pedir Produtos</title></head>
+<body style="font-family: sans-serif; padding: 20px;">
+  <h2>Pedido - Loja</h2>
+  <form id="formulario">
+    <h3>Carnes</h3>
+    Contrafilé: <input type="number" name="Contrafile"><br>
+    Costela: <input type="number" name="Costela"><br>
+    <h3>Frango</h3>
+    Filé de Frango: <input type="number" name="File de Frango"><br>
+    <br>
+    <button type="button" onclick="salvarEPassar()">Avançar</button>
+  </form>
+<script>
+function salvarEPassar() {
+  const dados = {};
+  const form = document.getElementById("formulario");
+  Array.from(form.elements).forEach(el => {
+    if (el.name && el.value && parseFloat(el.value) > 0) {
+      dados[el.name] = el.value;
+    }
+  });
+  localStorage.setItem("pedidoMS", JSON.stringify(dados));
+  window.location.href = "resumo_pedido.html";
+}
+</script>
+</body></html>
