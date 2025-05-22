@@ -1,0 +1,3 @@
+Versão moderna final do App Group MS
+Layout com login, categorias, status e painel de compras
+Data: 2025-05-22
