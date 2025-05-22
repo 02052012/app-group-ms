@@ -2,16 +2,1750 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>App Group MS</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <title>Pedido da Loja - Group MS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icon-192.png" type="image/png">
+    <meta name="theme-color" content="#800000">
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+            .then(() => console.log('Service Worker registrado'));
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #800000;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #800000;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1>App Group MS</h1>
-        <a class="button" href="pedido_loja.html">Acesso Loja</a>
-        <a class="button" href="painel_compras.html">Acesso Compras</a>
+        <h2>Pedido da Loja</h2>
+        <label for="loja">Loja:</label>
+        <select id="loja" name="loja">
+            <option>Mustang Batel</option>
+            <option>Mustang Mueller</option>
+            <option>Mustang Palladium</option>
+            <option>Mustang Cabral</option>
+            <option>Sheridan's</option>
+            <option>Scavollo</option>
+        </select>
+        <label for="produto_0">MOLHO BARBECUE *1,1 KG*:</label>
+<input type="text" id="produto_0" name="MOLHO BARBECUE *1,1 KG*" placeholder="quantidade">
+<br>
+<label for="produto_1">MAIONESE GRILL *1,1 KG*:</label>
+<input type="text" id="produto_1" name="MAIONESE GRILL *1,1 KG*" placeholder="quantidade">
+<br>
+<label for="produto_2">MOLHO CAESAR *1,1 KG*:</label>
+<input type="text" id="produto_2" name="MOLHO CAESAR *1,1 KG*" placeholder="quantidade">
+<br>
+<label for="produto_3">MOLHO CHIPOTLE *1,1 KG*:</label>
+<input type="text" id="produto_3" name="MOLHO CHIPOTLE *1,1 KG*" placeholder="quantidade">
+<br>
+<label for="produto_4">MOLHO BLUE CHEESE *1,1 KG*:</label>
+<input type="text" id="produto_4" name="MOLHO BLUE CHEESE *1,1 KG*" placeholder="quantidade">
+<br>
+<label for="produto_5">MOLHO HONEY MUSTARD *1,1 KG*:</label>
+<input type="text" id="produto_5" name="MOLHO HONEY MUSTARD *1,1 KG*" placeholder="quantidade">
+<br>
+<label for="produto_6">MOLHO SWETT CHILLI *1,1 KG*:</label>
+<input type="text" id="produto_6" name="MOLHO SWETT CHILLI *1,1 KG*" placeholder="quantidade">
+<br>
+<label for="produto_7">MOLHO KERRY RANCH:</label>
+<input type="text" id="produto_7" name="MOLHO KERRY RANCH" placeholder="quantidade">
+<br>
+<label for="produto_8">PRODUTO:</label>
+<input type="text" id="produto_8" name="PRODUTO" placeholder="quantidade">
+<br>
+<label for="produto_9">DORITOS:</label>
+<input type="text" id="produto_9" name="DORITOS" placeholder="quantidade">
+<br>
+<label for="produto_10">TORTILHAS DE MILHO:</label>
+<input type="text" id="produto_10" name="TORTILHAS DE MILHO" placeholder="quantidade">
+<br>
+<label for="produto_11">TORTILHA DE TRIGO 16 CM:</label>
+<input type="text" id="produto_11" name="TORTILHA DE TRIGO 16 CM" placeholder="quantidade">
+<br>
+<label for="produto_12">TORTILHAS DE TRIGO 25 cm:</label>
+<input type="text" id="produto_12" name="TORTILHAS DE TRIGO 25 cm" placeholder="quantidade">
+<br>
+<label for="produto_13">TORTILHOS DE TRIGO 30 cm:</label>
+<input type="text" id="produto_13" name="TORTILHOS DE TRIGO 30 cm" placeholder="quantidade">
+<br>
+<label for="produto_14">PRODUTO:</label>
+<input type="text" id="produto_14" name="PRODUTO" placeholder="quantidade">
+<br>
+<label for="produto_15">ÓLEO DE ALGODÃO BALDE *15,8L*:</label>
+<input type="text" id="produto_15" name="ÓLEO DE ALGODÃO BALDE *15,8L*" placeholder="quantidade">
+<br>
+<label for="produto_16">POLPA DE TOMATE :</label>
+<input type="text" id="produto_16" name="POLPA DE TOMATE " placeholder="quantidade">
+<br>
+<label for="produto_17">PRODUTO:</label>
+<input type="text" id="produto_17" name="PRODUTO" placeholder="quantidade">
+<br>
+<label for="produto_18">MUSSARELA *KG*:</label>
+<input type="text" id="produto_18" name="MUSSARELA *KG*" placeholder="quantidade">
+<br>
+<label for="produto_19">QUEIJO PRATO FATIADO *KG*:</label>
+<input type="text" id="produto_19" name="QUEIJO PRATO FATIADO *KG*" placeholder="quantidade">
+<br>
+<label for="produto_20">CHEDDAR BISNAGA:</label>
+<input type="text" id="produto_20" name="CHEDDAR BISNAGA" placeholder="quantidade">
+<br>
+<label for="produto_21">CHEDDAR PROCESSADO FATIADO:</label>
+<input type="text" id="produto_21" name="CHEDDAR PROCESSADO FATIADO" placeholder="quantidade">
+<br>
+<label for="produto_22">PROVOLONE *KG*:</label>
+<input type="text" id="produto_22" name="PROVOLONE *KG*" placeholder="quantidade">
+<br>
+<label for="produto_23">PARMESÃO *KG*:</label>
+<input type="text" id="produto_23" name="PARMESÃO *KG*" placeholder="quantidade">
+<br>
+<label for="produto_24">QUEIJO BRIE *KG*:</label>
+<input type="text" id="produto_24" name="QUEIJO BRIE *KG*" placeholder="quantidade">
+<br>
+<label for="produto_25">GORGONZOLA PEÇA *KG*:</label>
+<input type="text" id="produto_25" name="GORGONZOLA PEÇA *KG*" placeholder="quantidade">
+<br>
+<label for="produto_26">GORGONZOLA BISNAGA:</label>
+<input type="text" id="produto_26" name="GORGONZOLA BISNAGA" placeholder="quantidade">
+<br>
+<label for="produto_27">IOGURTE NATURAL:</label>
+<input type="text" id="produto_27" name="IOGURTE NATURAL" placeholder="quantidade">
+<br>
+<label for="produto_28">CREAM CHEESE BISNAGA:</label>
+<input type="text" id="produto_28" name="CREAM CHEESE BISNAGA" placeholder="quantidade">
+<br>
+<label for="produto_29">CHANTILLY *1L*:</label>
+<input type="text" id="produto_29" name="CHANTILLY *1L*" placeholder="quantidade">
+<br>
+<label for="produto_30">MARGARINA SEM SAL AMÉLIA:</label>
+<input type="text" id="produto_30" name="MARGARINA SEM SAL AMÉLIA" placeholder="quantidade">
+<br>
+<label for="produto_31">MANTEIGA SEM SAL *CAIXA 5KG*:</label>
+<input type="text" id="produto_31" name="MANTEIGA SEM SAL *CAIXA 5KG*" placeholder="quantidade">
+<br>
+<label for="produto_32">REQUEIJAO BISNAGA:</label>
+<input type="text" id="produto_32" name="REQUEIJAO BISNAGA" placeholder="quantidade">
+<br>
+<label for="produto_33">BALDE DE NATA:</label>
+<input type="text" id="produto_33" name="BALDE DE NATA" placeholder="quantidade">
+<br>
+<label for="produto_34">CREME DE LEITE *1L*:</label>
+<input type="text" id="produto_34" name="CREME DE LEITE *1L*" placeholder="quantidade">
+<br>
+<label for="produto_35">MUSSARELA DE BUFALA:</label>
+<input type="text" id="produto_35" name="MUSSARELA DE BUFALA" placeholder="quantidade">
+<br>
+<label for="produto_36">PRESUNTO:</label>
+<input type="text" id="produto_36" name="PRESUNTO" placeholder="quantidade">
+<br>
+<label for="produto_37">PRODUTO:</label>
+<input type="text" id="produto_37" name="PRODUTO" placeholder="quantidade">
+<br>
+<label for="produto_38">AIPIM CONGELADO:</label>
+<input type="text" id="produto_38" name="AIPIM CONGELADO" placeholder="quantidade">
+<br>
+<label for="produto_39">BATATA PALITO *KG*:</label>
+<input type="text" id="produto_39" name="BATATA PALITO *KG*" placeholder="quantidade">
+<br>
+<label for="produto_40">BATATA CRINKLE *KG*:</label>
+<input type="text" id="produto_40" name="BATATA CRINKLE *KG*" placeholder="quantidade">
+<br>
+<label for="produto_41">BATATA RUSTICA:</label>
+<input type="text" id="produto_41" name="BATATA RUSTICA" placeholder="quantidade">
+<br>
+<label for="produto_42">POLENTA PALITO:</label>
+<input type="text" id="produto_42" name="POLENTA PALITO" placeholder="quantidade">
+<br>
+<label for="produto_43">MASSA DE PASTEL:</label>
+<input type="text" id="produto_43" name="MASSA DE PASTEL" placeholder="quantidade">
+<br>
+<label for="produto_44">PRODUTO:</label>
+<input type="text" id="produto_44" name="PRODUTO" placeholder="quantidade">
+<br>
+<label for="produto_45">GAS PARA CHANTILLY:</label>
+<input type="text" id="produto_45" name="GAS PARA CHANTILLY" placeholder="quantidade">
+<br>
+<label for="produto_46">SORVETE CREME:</label>
+<input type="text" id="produto_46" name="SORVETE CREME" placeholder="quantidade">
+<br>
+<label for="produto_47">SORVETE CHOCOLATE:</label>
+<input type="text" id="produto_47" name="SORVETE CHOCOLATE" placeholder="quantidade">
+<br>
+<label for="produto_48">SORVETE MORANGO:</label>
+<input type="text" id="produto_48" name="SORVETE MORANGO" placeholder="quantidade">
+<br>
+<label for="produto_49">SORVETE FLOCOS:</label>
+<input type="text" id="produto_49" name="SORVETE FLOCOS" placeholder="quantidade">
+<br>
+<label for="produto_50">SUSPIRO:</label>
+<input type="text" id="produto_50" name="SUSPIRO" placeholder="quantidade">
+<br>
+<label for="produto_51">PRODUTO:</label>
+<input type="text" id="produto_51" name="PRODUTO" placeholder="quantidade">
+<br>
+<label for="produto_52">CAFÉ 3 CORAÇOES:</label>
+<input type="text" id="produto_52" name="CAFÉ 3 CORAÇOES" placeholder="quantidade">
+<br>
+<label for="produto_53">CAPSULA CAFÉ 3 CORAÇOES:</label>
+<input type="text" id="produto_53" name="CAPSULA CAFÉ 3 CORAÇOES" placeholder="quantidade">
+<br>
+<label for="produto_54">CHOCOLATE AO LEITE *1KG*:</label>
+<input type="text" id="produto_54" name="CHOCOLATE AO LEITE *1KG*" placeholder="quantidade">
+<br>
+<label for="produto_55">CHOCOLATE BRANCO *1KG*:</label>
+<input type="text" id="produto_55" name="CHOCOLATE BRANCO *1KG*" placeholder="quantidade">
+<br>
+<label for="produto_56">CHOCOLATE MEIO AMARGO *1KG*:</label>
+<input type="text" id="produto_56" name="CHOCOLATE MEIO AMARGO *1KG*" placeholder="quantidade">
+<br>
+<label for="produto_57">NUTTELA B READY:</label>
+<input type="text" id="produto_57" name="NUTTELA B READY" placeholder="quantidade">
+<br>
+<label for="produto_58">CHOCOLATE 50% CACAU *1KG*:</label>
+<input type="text" id="produto_58" name="CHOCOLATE 50% CACAU *1KG*" placeholder="quantidade">
+<br>
+<label for="produto_59">CHOCOLATE KITKAT BARRA:</label>
+<input type="text" id="produto_59" name="CHOCOLATE KITKAT BARRA" placeholder="quantidade">
+<br>
+<label for="produto_60">CHOCOLATE KINDER BUENO:</label>
+<input type="text" id="produto_60" name="CHOCOLATE KINDER BUENO" placeholder="quantidade">
+<br>
+<label for="produto_61">CHOCOLATE TWIX:</label>
+<input type="text" id="produto_61" name="CHOCOLATE TWIX" placeholder="quantidade">
+<br>
+<label for="produto_62">GANACHE:</label>
+<input type="text" id="produto_62" name="GANACHE" placeholder="quantidade">
+<br>
+<label for="produto_63">MINI OREO:</label>
+<input type="text" id="produto_63" name="MINI OREO" placeholder="quantidade">
+<br>
+<label for="produto_64">PRODUTO:</label>
+<input type="text" id="produto_64" name="PRODUTO" placeholder="quantidade">
+<br>
+<label for="produto_65">GLUTAMATO MONOSÓDICO *2KG*:</label>
+<input type="text" id="produto_65" name="GLUTAMATO MONOSÓDICO *2KG*" placeholder="quantidade">
+<br>
+<label for="produto_66">CALDO DE GALINHA *1,010 KG*:</label>
+<input type="text" id="produto_66" name="CALDO DE GALINHA *1,010 KG*" placeholder="quantidade">
+<br>
+<label for="produto_67">CALDO DE CARNE:</label>
+<input type="text" id="produto_67" name="CALDO DE CARNE" placeholder="quantidade">
+<br>
+<label for="produto_68">DEMI GLACÊ *1KG*:</label>
+<input type="text" id="produto_68" name="DEMI GLACÊ *1KG*" placeholder="quantidade">
+<br>
+<label for="produto_69">MOLHO BECHAMEL *1KG*:</label>
+<input type="text" id="produto_69" name="MOLHO BECHAMEL *1KG*" placeholder="quantidade">
+<br>
+<label for="produto_70">SABOR AMI TEMPERO *COMPLETO* PIMENTA:</label>
+<input type="text" id="produto_70" name="SABOR AMI TEMPERO *COMPLETO* PIMENTA" placeholder="quantidade">
+<br>
+<label for="produto_71">SAZON VERMELHO IDEAL PARA CARNES *900GR*:</label>
+<input type="text" id="produto_71" name="SAZON VERMELHO IDEAL PARA CARNES *900GR*" placeholder="quantidade">
+<br>
+<label for="produto_72">PRODUTO:</label>
+<input type="text" id="produto_72" name="PRODUTO" placeholder="quantidade">
+<br>
+<label for="produto_73">AMENDOAS DEFUMADAS:</label>
+<input type="text" id="produto_73" name="AMENDOAS DEFUMADAS" placeholder="quantidade">
+<br>
+<label for="produto_74">AMENDOIN JAPONES TRADICIONAL:</label>
+<input type="text" id="produto_74" name="AMENDOIN JAPONES TRADICIONAL" placeholder="quantidade">
+<br>
+<label for="produto_75">ALHO FRITO:</label>
+<input type="text" id="produto_75" name="ALHO FRITO" placeholder="quantidade">
+<br>
+<label for="produto_76">AÇUCAR MASCAVO *KG*:</label>
+<input type="text" id="produto_76" name="AÇUCAR MASCAVO *KG*" placeholder="quantidade">
+<br>
+<label for="produto_77">ALHO EM PÓ *KG*:</label>
+<input type="text" id="produto_77" name="ALHO EM PÓ *KG*" placeholder="quantidade">
+<br>
+<label for="produto_78">ALHO TRITURADO:</label>
+<input type="text" id="produto_78" name="ALHO TRITURADO" placeholder="quantidade">
+<br>
+<label for="produto_79">AMENDOIM:</label>
+<input type="text" id="produto_79" name="AMENDOIM" placeholder="quantidade">
+<br>
+<label for="produto_80">AVELA:</label>
+<input type="text" id="produto_80" name="AVELA" placeholder="quantidade">
+<br>
+<label for="produto_81">NOZES:</label>
+<input type="text" id="produto_81" name="NOZES" placeholder="quantidade">
+<br>
+<label for="produto_82">CALDO DELICIAS DO MAR:</label>
+<input type="text" id="produto_82" name="CALDO DELICIAS DO MAR" placeholder="quantidade">
+<br>
+<label for="produto_83">CANELA PAU:</label>
+<input type="text" id="produto_83" name="CANELA PAU" placeholder="quantidade">
+<br>
+<label for="produto_84">CEBOLA EM PÓ:</label>
+<input type="text" id="produto_84" name="CEBOLA EM PÓ" placeholder="quantidade">
+<br>
+<label for="produto_85">COMINHO EM PÓ *KG*:</label>
+<input type="text" id="produto_85" name="COMINHO EM PÓ *KG*" placeholder="quantidade">
+<br>
+<label for="produto_86">CHA HIBISCO:</label>
+<input type="text" id="produto_86" name="CHA HIBISCO" placeholder="quantidade">
+<br>
+<label for="produto_87">CHILI MEXICANO EM PÓ *KG*:</label>
+<input type="text" id="produto_87" name="CHILI MEXICANO EM PÓ *KG*" placeholder="quantidade">
+<br>
+<label for="produto_88">COENTRO EM GRÃO:</label>
+<input type="text" id="produto_88" name="COENTRO EM GRÃO" placeholder="quantidade">
+<br>
+<label for="produto_89">COGUMELO PORTINI:</label>
+<input type="text" id="produto_89" name="COGUMELO PORTINI" placeholder="quantidade">
+<br>
+<label for="produto_90">CRAVO:</label>
+<input type="text" id="produto_90" name="CRAVO" placeholder="quantidade">
+<br>
+<label for="produto_91">CURRY *KG*:</label>
+<input type="text" id="produto_91" name="CURRY *KG*" placeholder="quantidade">
+<br>
+<label for="produto_92">EXTRAGRÃO:</label>
+<input type="text" id="produto_92" name="EXTRAGRÃO" placeholder="quantidade">
+<br>
+<label for="produto_93">FARINHA DE MILHO AMARELA EM FLOCOS:</label>
+<input type="text" id="produto_93" name="FARINHA DE MILHO AMARELA EM FLOCOS" placeholder="quantidade">
+<br>
+<label for="produto_94">FUNGHI:</label>
+<input type="text" id="produto_94" name="FUNGHI" placeholder="quantidade">
+<br>
+<label for="produto_95">GERGILIM PRETO:</label>
+<input type="text" id="produto_95" name="GERGILIM PRETO" placeholder="quantidade">
+<br>
+<label for="produto_96">GERGILIM BRANCO:</label>
+<input type="text" id="produto_96" name="GERGILIM BRANCO" placeholder="quantidade">
+<br>
+<label for="produto_97">GERGILIM TORRADO:</label>
+<input type="text" id="produto_97" name="GERGILIM TORRADO" placeholder="quantidade">
+<br>
+<label for="produto_98">GRANULADO COLORIDO:</label>
+<input type="text" id="produto_98" name="GRANULADO COLORIDO" placeholder="quantidade">
+<br>
+<label for="produto_99">LEMON PEPER:</label>
+<input type="text" id="produto_99" name="LEMON PEPER" placeholder="quantidade">
+<br>
+<label for="produto_100">LICHIA EM CALDA SEM CAROÇO:</label>
+<input type="text" id="produto_100" name="LICHIA EM CALDA SEM CAROÇO" placeholder="quantidade">
+<br>
+<label for="produto_101">MARSHMALLOWS HARIBO **:</label>
+<input type="text" id="produto_101" name="MARSHMALLOWS HARIBO **" placeholder="quantidade">
+<br>
+<label for="produto_102">OVOS:</label>
+<input type="text" id="produto_102" name="OVOS" placeholder="quantidade">
+<br>
+<label for="produto_103">PIMENTA BIQUINHO:</label>
+<input type="text" id="produto_103" name="PIMENTA BIQUINHO" placeholder="quantidade">
+<br>
+<label for="produto_104">PAPIKRA DEFUMADA:</label>
+<input type="text" id="produto_104" name="PAPIKRA DEFUMADA" placeholder="quantidade">
+<br>
+<label for="produto_105">PÁPRICA PICANTE *KG*:</label>
+<input type="text" id="produto_105" name="PÁPRICA PICANTE *KG*" placeholder="quantidade">
+<br>
+<label for="produto_106">PIMENTA PRETA EM PO (REINO):</label>
+<input type="text" id="produto_106" name="PIMENTA PRETA EM PO (REINO)" placeholder="quantidade">
+<br>
+<label for="produto_107">PIMENTA EM GRÃO:</label>
+<input type="text" id="produto_107" name="PIMENTA EM GRÃO" placeholder="quantidade">
+<br>
+<label for="produto_108">PIMENTA ROSA:</label>
+<input type="text" id="produto_108" name="PIMENTA ROSA" placeholder="quantidade">
+<br>
+<label for="produto_109">PIMENTA SIRIA:</label>
+<input type="text" id="produto_109" name="PIMENTA SIRIA" placeholder="quantidade">
+<br>
+<label for="produto_110">ROLMOPS:</label>
+<input type="text" id="produto_110" name="ROLMOPS" placeholder="quantidade">
+<br>
+<label for="produto_111">SHITAKE SECO:</label>
+<input type="text" id="produto_111" name="SHITAKE SECO" placeholder="quantidade">
+<br>
+<label for="produto_112">SHIMEJI:</label>
+<input type="text" id="produto_112" name="SHIMEJI" placeholder="quantidade">
+<br>
+<label for="produto_113">SUCRILHOS SEM AÇÚCAR:</label>
+<input type="text" id="produto_113" name="SUCRILHOS SEM AÇÚCAR" placeholder="quantidade">
+<br>
+<label for="produto_114">PTS PROTEÍNA SOJA:</label>
+<input type="text" id="produto_114" name="PTS PROTEÍNA SOJA" placeholder="quantidade">
+<br>
+<label for="produto_115">TAPIOCA GRANULADA:</label>
+<input type="text" id="produto_115" name="TAPIOCA GRANULADA" placeholder="quantidade">
+<br>
+<label for="produto_116">TONKATSU:</label>
+<input type="text" id="produto_116" name="TONKATSU" placeholder="quantidade">
+<br>
+<label for="produto_117">FEIJÃO CAVALO *KG*:</label>
+<input type="text" id="produto_117" name="FEIJÃO CAVALO *KG*" placeholder="quantidade">
+<br>
+<label for="produto_118">PRODUTO:</label>
+<input type="text" id="produto_118" name="PRODUTO" placeholder="quantidade">
+<br>
+<label for="produto_119">ABACAXI EM CALDA:</label>
+<input type="text" id="produto_119" name="ABACAXI EM CALDA" placeholder="quantidade">
+<br>
+<label for="produto_120">BARBECUE *3,5KG*:</label>
+<input type="text" id="produto_120" name="BARBECUE *3,5KG*" placeholder="quantidade">
+<br>
+<label for="produto_121">AÇUCAR 5KG:</label>
+<input type="text" id="produto_121" name="AÇUCAR 5KG" placeholder="quantidade">
+<br>
+<label for="produto_122">AÇUCAR SACHÊ:</label>
+<input type="text" id="produto_122" name="AÇUCAR SACHÊ" placeholder="quantidade">
+<br>
+<label for="produto_123">ADOÇANTE SACHÊ:</label>
+<input type="text" id="produto_123" name="ADOÇANTE SACHÊ" placeholder="quantidade">
+<br>
+<label for="produto_124">AMIDO DE MILHO *KG*:</label>
+<input type="text" id="produto_124" name="AMIDO DE MILHO *KG*" placeholder="quantidade">
+<br>
+<label for="produto_125">ARROZ ARBÓRIO KG:</label>
+<input type="text" id="produto_125" name="ARROZ ARBÓRIO KG" placeholder="quantidade">
+<br>
+<label for="produto_126">ARROZ BRANCO *05 KG*:</label>
+<input type="text" id="produto_126" name="ARROZ BRANCO *05 KG*" placeholder="quantidade">
+<br>
+<label for="produto_127">ARROZ PARBO *05 KG*:</label>
+<input type="text" id="produto_127" name="ARROZ PARBO *05 KG*" placeholder="quantidade">
+<br>
+<label for="produto_128">AZEITE DE OLIVA *5L*:</label>
+<input type="text" id="produto_128" name="AZEITE DE OLIVA *5L*" placeholder="quantidade">
+<br>
+<label for="produto_129">AZEITONA PRETA FATIADA DRENADA *1,8KG*:</label>
+<input type="text" id="produto_129" name="AZEITONA PRETA FATIADA DRENADA *1,8KG*" placeholder="quantidade">
+<br>
+<label for="produto_130">BROCOLIS:</label>
+<input type="text" id="produto_130" name="BROCOLIS" placeholder="quantidade">
+<br>
+<label for="produto_131">CATCHUP SACHE HEMMER:</label>
+<input type="text" id="produto_131" name="CATCHUP SACHE HEMMER" placeholder="quantidade">
+<br>
+<label for="produto_132">CATCHUP *397g HEINZ*:</label>
+<input type="text" id="produto_132" name="CATCHUP *397g HEINZ*" placeholder="quantidade">
+<br>
+<label for="produto_133">CATCHUO HEINS GALAO:</label>
+<input type="text" id="produto_133" name="CATCHUO HEINS GALAO" placeholder="quantidade">
+<br>
+<label for="produto_134">CATCHUP *GL 3,8KG*:</label>
+<input type="text" id="produto_134" name="CATCHUP *GL 3,8KG*" placeholder="quantidade">
+<br>
+<label for="produto_135">CEREJA MARRASQUINO COM TALO *LATA*:</label>
+<input type="text" id="produto_135" name="CEREJA MARRASQUINO COM TALO *LATA*" placeholder="quantidade">
+<br>
+<label for="produto_136">COBERTURAS PARA SORVETE *CARAMELO* *1,3KG*:</label>
+<input type="text" id="produto_136" name="COBERTURAS PARA SORVETE *CARAMELO* *1,3KG*" placeholder="quantidade">
+<br>
+<label for="produto_137">COBERTURAS PARA SORVETE *CHOCOLATE* *1,3KG*:</label>
+<input type="text" id="produto_137" name="COBERTURAS PARA SORVETE *CHOCOLATE* *1,3KG*" placeholder="quantidade">
+<br>
+<label for="produto_138">COBERTURAS PARA SORVETE *MORANGO* *1,3KG*:</label>
+<input type="text" id="produto_138" name="COBERTURAS PARA SORVETE *MORANGO* *1,3KG*" placeholder="quantidade">
+<br>
+<label for="produto_139">CREME DE AVELÃ *POTE*:</label>
+<input type="text" id="produto_139" name="CREME DE AVELÃ *POTE*" placeholder="quantidade">
+<br>
+<label for="produto_140">DOCE DE LEITE BALDE *4,8KG*:</label>
+<input type="text" id="produto_140" name="DOCE DE LEITE BALDE *4,8KG*" placeholder="quantidade">
+<br>
+<label for="produto_141">ESSÊNCIA DE BAUNILHA:</label>
+<input type="text" id="produto_141" name="ESSÊNCIA DE BAUNILHA" placeholder="quantidade">
+<br>
+<label for="produto_142">CUSCUZ:</label>
+<input type="text" id="produto_142" name="CUSCUZ" placeholder="quantidade">
+<br>
+<label for="produto_143">FARINHA DE MILHO:</label>
+<input type="text" id="produto_143" name="FARINHA DE MILHO" placeholder="quantidade">
+<br>
+<label for="produto_144">FARINHA DE MILHO AMARELA EM FLOCOS:</label>
+<input type="text" id="produto_144" name="FARINHA DE MILHO AMARELA EM FLOCOS" placeholder="quantidade">
+<br>
+<label for="produto_145">FARINHA DE ROSCA *KG*:</label>
+<input type="text" id="produto_145" name="FARINHA DE ROSCA *KG*" placeholder="quantidade">
+<br>
+<label for="produto_146">FARINHA DE TRIGO *5KG*:</label>
+<input type="text" id="produto_146" name="FARINHA DE TRIGO *5KG*" placeholder="quantidade">
+<br>
+<label for="produto_147">FARINHA DE MANDIOCA:</label>
+<input type="text" id="produto_147" name="FARINHA DE MANDIOCA" placeholder="quantidade">
+<br>
+<label for="produto_148">FARINHA PANKO:</label>
+<input type="text" id="produto_148" name="FARINHA PANKO" placeholder="quantidade">
+<br>
+<label for="produto_149">FAROFA TRADICIONAL TEMPERADA *500GR*:</label>
+<input type="text" id="produto_149" name="FAROFA TRADICIONAL TEMPERADA *500GR*" placeholder="quantidade">
+<br>
+<label for="produto_150">FEIJÃO CARIOCA *1KG*:</label>
+<input type="text" id="produto_150" name="FEIJÃO CARIOCA *1KG*" placeholder="quantidade">
+<br>
+<label for="produto_151">FEIJÃO PRETO *1KG*:</label>
+<input type="text" id="produto_151" name="FEIJÃO PRETO *1KG*" placeholder="quantidade">
+<br>
+<label for="produto_152">FERMENTO BIOLÓGICO:</label>
+<input type="text" id="produto_152" name="FERMENTO BIOLÓGICO" placeholder="quantidade">
+<br>
+<label for="produto_153">FERMENTO PÓ QUÍMICO:</label>
+<input type="text" id="produto_153" name="FERMENTO PÓ QUÍMICO" placeholder="quantidade">
+<br>
+<label for="produto_154">FUBA AMARELO:</label>
+<input type="text" id="produto_154" name="FUBA AMARELO" placeholder="quantidade">
+<br>
+<label for="produto_155">GELATINA EM PÓ:</label>
+<input type="text" id="produto_155" name="GELATINA EM PÓ" placeholder="quantidade">
+<br>
+<label for="produto_156">BALDE JALAPENO:</label>
+<input type="text" id="produto_156" name="BALDE JALAPENO" placeholder="quantidade">
+<br>
+<label for="produto_157">LEITE DE COCO *1L*:</label>
+<input type="text" id="produto_157" name="LEITE DE COCO *1L*" placeholder="quantidade">
+<br>
+<label for="produto_158">LEITE INTEGRAL :</label>
+<input type="text" id="produto_158" name="LEITE INTEGRAL " placeholder="quantidade">
+<br>
+<label for="produto_159">LEITE EM PÓ FIRMESA 1 KG:</label>
+<input type="text" id="produto_159" name="LEITE EM PÓ FIRMESA 1 KG" placeholder="quantidade">
+<br>
+<label for="produto_160">LEITE CONDENSADO *395GR*:</label>
+<input type="text" id="produto_160" name="LEITE CONDENSADO *395GR*" placeholder="quantidade">
+<br>
+<label for="produto_161">MACARRÃO PARAFUSO *500g*:</label>
+<input type="text" id="produto_161" name="MACARRÃO PARAFUSO *500g*" placeholder="quantidade">
+<br>
+<label for="produto_162">MAIONESE SACHÊ:</label>
+<input type="text" id="produto_162" name="MAIONESE SACHÊ" placeholder="quantidade">
+<br>
+<label for="produto_163">MAIONESE HELLMANN´S 2,8KG:</label>
+<input type="text" id="produto_163" name="MAIONESE HELLMANN´S 2,8KG" placeholder="quantidade">
+<br>
+<label for="produto_164">MEL *500GR*:</label>
+<input type="text" id="produto_164" name="MEL *500GR*" placeholder="quantidade">
+<br>
+<label for="produto_165">MOLHO SHOYU *3,1L*:</label>
+<input type="text" id="produto_165" name="MOLHO SHOYU *3,1L*" placeholder="quantidade">
+<br>
+<label for="produto_166">MACARRAO SPAGHETI:</label>
+<input type="text" id="produto_166" name="MACARRAO SPAGHETI" placeholder="quantidade">
+<br>
+<label for="produto_167">MARSHMALLOWS *250G*:</label>
+<input type="text" id="produto_167" name="MARSHMALLOWS *250G*" placeholder="quantidade">
+<br>
+<label for="produto_168">MILHO DRENADO (LATA ou SACHÊ) *200g*:</label>
+<input type="text" id="produto_168" name="MILHO DRENADO (LATA ou SACHÊ) *200g*" placeholder="quantidade">
+<br>
+<label for="produto_169">MOLHO INGLÊS 900ML:</label>
+<input type="text" id="produto_169" name="MOLHO INGLÊS 900ML" placeholder="quantidade">
+<br>
+<label for="produto_170">MOLHO DE PIMENTA CASEIRO *900ML*:</label>
+<input type="text" id="produto_170" name="MOLHO DE PIMENTA CASEIRO *900ML*" placeholder="quantidade">
+<br>
+<label for="produto_171">MOLHO DE PIMENTA CASEIRO *GALÃO*:</label>
+<input type="text" id="produto_171" name="MOLHO DE PIMENTA CASEIRO *GALÃO*" placeholder="quantidade">
+<br>
+<label for="produto_172">MOLHO DE PIMENTA SALÃO JALAPEÑO BRAVA*60ml*:</label>
+<input type="text" id="produto_172" name="MOLHO DE PIMENTA SALÃO JALAPEÑO BRAVA*60ml*" placeholder="quantidade">
+<br>
+<label for="produto_173">MOLHO DE PIMENTA SALÃO BHUTJOLOKIA BRAVA*60ml*:</label>
+<input type="text" id="produto_173" name="MOLHO DE PIMENTA SALÃO BHUTJOLOKIA BRAVA*60ml*" placeholder="quantidade">
+<br>
+<label for="produto_174">MOSTARDA *397g HEINZ*:</label>
+<input type="text" id="produto_174" name="MOSTARDA *397g HEINZ*" placeholder="quantidade">
+<br>
+<label for="produto_175">MOSTARDA *GL 3,8KG*:</label>
+<input type="text" id="produto_175" name="MOSTARDA *GL 3,8KG*" placeholder="quantidade">
+<br>
+<label for="produto_176">MOSTARDA SACHET:</label>
+<input type="text" id="produto_176" name="MOSTARDA SACHET" placeholder="quantidade">
+<br>
+<label for="produto_177">MOSTARDA ESCURA HEMMER GL3,8KG:</label>
+<input type="text" id="produto_177" name="MOSTARDA ESCURA HEMMER GL3,8KG" placeholder="quantidade">
+<br>
+<label for="produto_178">MOSTRADA DJON:</label>
+<input type="text" id="produto_178" name="MOSTRADA DJON" placeholder="quantidade">
+<br>
+<label for="produto_179">ÓLEO DE SOJA *900 ML*:</label>
+<input type="text" id="produto_179" name="ÓLEO DE SOJA *900 ML*" placeholder="quantidade">
+<br>
+<label for="produto_180">OVOMALTINE *750G*:</label>
+<input type="text" id="produto_180" name="OVOMALTINE *750G*" placeholder="quantidade">
+<br>
+<label for="produto_181">PAÇOQUINHA:</label>
+<input type="text" id="produto_181" name="PAÇOQUINHA" placeholder="quantidade">
+<br>
+<label for="produto_182">PALMITO EM CONSERVA RODELAS:</label>
+<input type="text" id="produto_182" name="PALMITO EM CONSERVA RODELAS" placeholder="quantidade">
+<br>
+<label for="produto_183">PEPINO EM CONSERVA *1,8 KG*:</label>
+<input type="text" id="produto_183" name="PEPINO EM CONSERVA *1,8 KG*" placeholder="quantidade">
+<br>
+<label for="produto_184">BISCOITO MAIZENA *PCT 300 G*:</label>
+<input type="text" id="produto_184" name="BISCOITO MAIZENA *PCT 300 G*" placeholder="quantidade">
+<br>
+<label for="produto_185">SAL FINO *1KG*:</label>
+<input type="text" id="produto_185" name="SAL FINO *1KG*" placeholder="quantidade">
+<br>
+<label for="produto_186">SAL SACHÊ:</label>
+<input type="text" id="produto_186" name="SAL SACHÊ" placeholder="quantidade">
+<br>
+<label for="produto_187">SAL GROSSO:</label>
+<input type="text" id="produto_187" name="SAL GROSSO" placeholder="quantidade">
+<br>
+<label for="produto_188">SUCO CONCENTRADO ABACAXI *GF 500 ML*:</label>
+<input type="text" id="produto_188" name="SUCO CONCENTRADO ABACAXI *GF 500 ML*" placeholder="quantidade">
+<br>
+<label for="produto_189">SUCO CONCENTRADO MARACUJA *GF 500 ML*:</label>
+<input type="text" id="produto_189" name="SUCO CONCENTRADO MARACUJA *GF 500 ML*" placeholder="quantidade">
+<br>
+<label for="produto_190">TOMATE SECO DRENADO *BALDE 1,4 DRENADO KG*:</label>
+<input type="text" id="produto_190" name="TOMATE SECO DRENADO *BALDE 1,4 DRENADO KG*" placeholder="quantidade">
+<br>
+<label for="produto_191">VINAGRE ACETO BALSÂMICO *5L*:</label>
+<input type="text" id="produto_191" name="VINAGRE ACETO BALSÂMICO *5L*" placeholder="quantidade">
+<br>
+<label for="produto_192">VINAGRE DE ÁLCOOL *5L*:</label>
+<input type="text" id="produto_192" name="VINAGRE DE ÁLCOOL *5L*" placeholder="quantidade">
+<br>
+<label for="produto_193">MASSAS:</label>
+<input type="text" id="produto_193" name="MASSAS" placeholder="quantidade">
+<br>
+<label for="produto_194">NHOQUE:</label>
+<input type="text" id="produto_194" name="NHOQUE" placeholder="quantidade">
+<br>
+<label for="produto_195">LASANHA:</label>
+<input type="text" id="produto_195" name="LASANHA" placeholder="quantidade">
+<br>
+<label for="produto_196">TALHARIM BRANCO:</label>
+<input type="text" id="produto_196" name="TALHARIM BRANCO" placeholder="quantidade">
+<br>
+<label for="produto_197">TALHARIM VERDE:</label>
+<input type="text" id="produto_197" name="TALHARIM VERDE" placeholder="quantidade">
+<br>
+<label for="produto_198">RONDELI:</label>
+<input type="text" id="produto_198" name="RONDELI" placeholder="quantidade">
+<br>
+<label for="produto_199">PARPADELLI:</label>
+<input type="text" id="produto_199" name="PARPADELLI" placeholder="quantidade">
+<br>
+<label for="produto_200">PRODUTO:</label>
+<input type="text" id="produto_200" name="PRODUTO" placeholder="quantidade">
+<br>
+<label for="produto_201">TORTINHA DE MAÇÃ:</label>
+<input type="text" id="produto_201" name="TORTINHA DE MAÇÃ" placeholder="quantidade">
+<br>
+<label for="produto_202">X CAKE:</label>
+<input type="text" id="produto_202" name="X CAKE" placeholder="quantidade">
+<br>
+<label for="produto_203">CHURROS:</label>
+<input type="text" id="produto_203" name="CHURROS" placeholder="quantidade">
+<br>
+<label for="produto_204">CARNE SUÍNA E BOVINA:</label>
+<input type="text" id="produto_204" name="CARNE SUÍNA E BOVINA" placeholder="quantidade">
+<br>
+<label for="produto_205">ACEM MOIDO:</label>
+<input type="text" id="produto_205" name="ACEM MOIDO" placeholder="quantidade">
+<br>
+<label for="produto_206">COPA LOMBO DE PORCO:</label>
+<input type="text" id="produto_206" name="COPA LOMBO DE PORCO" placeholder="quantidade">
+<br>
+<label for="produto_207">BACON FATIADO:</label>
+<input type="text" id="produto_207" name="BACON FATIADO" placeholder="quantidade">
+<br>
+<label for="produto_208">BACON CUBOS:</label>
+<input type="text" id="produto_208" name="BACON CUBOS" placeholder="quantidade">
+<br>
+<label for="produto_209">BARRIGA SUINA:</label>
+<input type="text" id="produto_209" name="BARRIGA SUINA" placeholder="quantidade">
+<br>
+<label for="produto_210">BISTECA:</label>
+<input type="text" id="produto_210" name="BISTECA" placeholder="quantidade">
+<br>
+<label for="produto_211">CALABRESA:</label>
+<input type="text" id="produto_211" name="CALABRESA" placeholder="quantidade">
+<br>
+<label for="produto_212">LINGUICA:</label>
+<input type="text" id="produto_212" name="LINGUICA" placeholder="quantidade">
+<br>
+<label for="produto_213">COSTELA SUINA FRESCA (A):</label>
+<input type="text" id="produto_213" name="COSTELA SUINA FRESCA (A)" placeholder="quantidade">
+<br>
+<label for="produto_214">LINGUICA CALABREZA DEF.:</label>
+<input type="text" id="produto_214" name="LINGUICA CALABREZA DEF." placeholder="quantidade">
+<br>
+<label for="produto_215">MANTA DE BACON PARA TORRESMO:</label>
+<input type="text" id="produto_215" name="MANTA DE BACON PARA TORRESMO" placeholder="quantidade">
+<br>
+<label for="produto_216">MUSCULO:</label>
+<input type="text" id="produto_216" name="MUSCULO" placeholder="quantidade">
+<br>
+<label for="produto_217">PICANHA:</label>
+<input type="text" id="produto_217" name="PICANHA" placeholder="quantidade">
+<br>
+<label for="produto_218">CARNE FRANGO:</label>
+<input type="text" id="produto_218" name="CARNE FRANGO" placeholder="quantidade">
+<br>
+<label for="produto_219">COXA SOBRECOXA DE FRANGO C/OSSO:</label>
+<input type="text" id="produto_219" name="COXA SOBRECOXA DE FRANGO C/OSSO" placeholder="quantidade">
+<br>
+<label for="produto_220">COXA SOBRECOXA DE FRANGO C/O PASSARINHO:</label>
+<input type="text" id="produto_220" name="COXA SOBRECOXA DE FRANGO C/O PASSARINHO" placeholder="quantidade">
+<br>
+<label for="produto_221">COXINHA DA ASA KG:</label>
+<input type="text" id="produto_221" name="COXINHA DA ASA KG" placeholder="quantidade">
+<br>
+<label for="produto_222">EMPANADO DE FRANGO:</label>
+<input type="text" id="produto_222" name="EMPANADO DE FRANGO" placeholder="quantidade">
+<br>
+<label for="produto_223">FILE DE FRANGO MILANESA:</label>
+<input type="text" id="produto_223" name="FILE DE FRANGO MILANESA" placeholder="quantidade">
+<br>
+<label for="produto_224">FRANGO INTEIRO:</label>
+<input type="text" id="produto_224" name="FRANGO INTEIRO" placeholder="quantidade">
+<br>
+<label for="produto_225">FRANGO INTEIRO C/O RECHEADO:</label>
+<input type="text" id="produto_225" name="FRANGO INTEIRO C/O RECHEADO" placeholder="quantidade">
+<br>
+<label for="produto_226">FRANGO MOIDO:</label>
+<input type="text" id="produto_226" name="FRANGO MOIDO" placeholder="quantidade">
+<br>
+<label for="produto_227">NUGGETS DE FRANGO KG:</label>
+<input type="text" id="produto_227" name="NUGGETS DE FRANGO KG" placeholder="quantidade">
+<br>
+<label for="produto_228">PEITO DE FRANGO S/ OSSO FILE:</label>
+<input type="text" id="produto_228" name="PEITO DE FRANGO S/ OSSO FILE" placeholder="quantidade">
+<br>
+<label for="produto_229">SOBRECOXA DE FRANGO SEM OSSO KG:</label>
+<input type="text" id="produto_229" name="SOBRECOXA DE FRANGO SEM OSSO KG" placeholder="quantidade">
+<br>
+<label for="produto_230">TULIPA MEIO ASA DE FRANGO KG:</label>
+<input type="text" id="produto_230" name="TULIPA MEIO ASA DE FRANGO KG" placeholder="quantidade">
+<br>
+<label for="produto_231">CARNE DE JACARE:</label>
+<input type="text" id="produto_231" name="CARNE DE JACARE" placeholder="quantidade">
+<br>
+<label for="produto_232">PESCADOS:</label>
+<input type="text" id="produto_232" name="PESCADOS" placeholder="quantidade">
+<br>
+<label for="produto_233">FILÉ DE SALMÃO:</label>
+<input type="text" id="produto_233" name="FILÉ DE SALMÃO" placeholder="quantidade">
+<br>
+<label for="produto_234">FILET DE CAÇÃO:</label>
+<input type="text" id="produto_234" name="FILET DE CAÇÃO" placeholder="quantidade">
+<br>
+<label for="produto_235">HOLMOPPS:</label>
+<input type="text" id="produto_235" name="HOLMOPPS" placeholder="quantidade">
+<br>
+<label for="produto_236">TILAPIA:</label>
+<input type="text" id="produto_236" name="TILAPIA" placeholder="quantidade">
+<br>
+<label for="produto_237">LAMBARI SEM VICERAS:</label>
+<input type="text" id="produto_237" name="LAMBARI SEM VICERAS" placeholder="quantidade">
+<br>
+<label for="produto_238">PANGA:</label>
+<input type="text" id="produto_238" name="PANGA" placeholder="quantidade">
+<br>
+<label for="produto_239">SOFT:</label>
+<input type="text" id="produto_239" name="SOFT" placeholder="quantidade">
+<br>
+<label for="produto_240">COCA COLA LATA:</label>
+<input type="text" id="produto_240" name="COCA COLA LATA" placeholder="quantidade">
+<br>
+<label for="produto_241">COCA COLA ZERO LATA:</label>
+<input type="text" id="produto_241" name="COCA COLA ZERO LATA" placeholder="quantidade">
+<br>
+<label for="produto_242">COCA COLA ZERO KS:</label>
+<input type="text" id="produto_242" name="COCA COLA ZERO KS" placeholder="quantidade">
+<br>
+<label for="produto_243">COCA COLA PET 2L:</label>
+<input type="text" id="produto_243" name="COCA COLA PET 2L" placeholder="quantidade">
+<br>
+<label for="produto_244">COCA COLA ZERO PET 2L:</label>
+<input type="text" id="produto_244" name="COCA COLA ZERO PET 2L" placeholder="quantidade">
+<br>
+<label for="produto_245">COCA COLA KS:</label>
+<input type="text" id="produto_245" name="COCA COLA KS" placeholder="quantidade">
+<br>
+<label for="produto_246">CHA MATE LEAO:</label>
+<input type="text" id="produto_246" name="CHA MATE LEAO" placeholder="quantidade">
+<br>
+<label for="produto_247">DELL VALLE MARACUJA:</label>
+<input type="text" id="produto_247" name="DELL VALLE MARACUJA" placeholder="quantidade">
+<br>
+<label for="produto_248">FANTA LARANJA:</label>
+<input type="text" id="produto_248" name="FANTA LARANJA" placeholder="quantidade">
+<br>
+<label for="produto_249">ICE TEA LIMÃO:</label>
+<input type="text" id="produto_249" name="ICE TEA LIMÃO" placeholder="quantidade">
+<br>
+<label for="produto_250">ICE TEA PESSEGO:</label>
+<input type="text" id="produto_250" name="ICE TEA PESSEGO" placeholder="quantidade">
+<br>
+<label for="produto_251">SPRITER LATA:</label>
+<input type="text" id="produto_251" name="SPRITER LATA" placeholder="quantidade">
+<br>
+<label for="produto_252">FANTA GUARANA LATA:</label>
+<input type="text" id="produto_252" name="FANTA GUARANA LATA" placeholder="quantidade">
+<br>
+<label for="produto_253">SCHWEPPES TONICA LATA:</label>
+<input type="text" id="produto_253" name="SCHWEPPES TONICA LATA" placeholder="quantidade">
+<br>
+<label for="produto_254">SCHWEPPES CITRUS LATA:</label>
+<input type="text" id="produto_254" name="SCHWEPPES CITRUS LATA" placeholder="quantidade">
+<br>
+<label for="produto_255">SCHWEPPES TONICA SEM ACUCAR:</label>
+<input type="text" id="produto_255" name="SCHWEPPES TONICA SEM ACUCAR" placeholder="quantidade">
+<br>
+<label for="produto_256">SCHWEPPES CITRUS SEM ACUCAR:</label>
+<input type="text" id="produto_256" name="SCHWEPPES CITRUS SEM ACUCAR" placeholder="quantidade">
+<br>
+<label for="produto_257">SPRITE LEMOM FRESH:</label>
+<input type="text" id="produto_257" name="SPRITE LEMOM FRESH" placeholder="quantidade">
+<br>
+<label for="produto_258">ENEGERTICO BURN LATA 250ML:</label>
+<input type="text" id="produto_258" name="ENEGERTICO BURN LATA 250ML" placeholder="quantidade">
+<br>
+<label for="produto_259">MONSTER REGULAR:</label>
+<input type="text" id="produto_259" name="MONSTER REGULAR" placeholder="quantidade">
+<br>
+<label for="produto_260">MONSTER ULTRA PARADISE MACA:</label>
+<input type="text" id="produto_260" name="MONSTER ULTRA PARADISE MACA" placeholder="quantidade">
+<br>
+<label for="produto_261">AGUA COM GAS:</label>
+<input type="text" id="produto_261" name="AGUA COM GAS" placeholder="quantidade">
+<br>
+<label for="produto_262">AGUA COM GAS 1,5LTRO:</label>
+<input type="text" id="produto_262" name="AGUA COM GAS 1,5LTRO" placeholder="quantidade">
+<br>
+<label for="produto_263">AGUA SEM GAS:</label>
+<input type="text" id="produto_263" name="AGUA SEM GAS" placeholder="quantidade">
+<br>
+<label for="produto_264">DELL VALLE UVA:</label>
+<input type="text" id="produto_264" name="DELL VALLE UVA" placeholder="quantidade">
+<br>
+<label for="produto_265">DELL VALLE PESSEGO:</label>
+<input type="text" id="produto_265" name="DELL VALLE PESSEGO" placeholder="quantidade">
+<br>
+<label for="produto_266">CERVEJA:</label>
+<input type="text" id="produto_266" name="CERVEJA" placeholder="quantidade">
+<br>
+<label for="produto_267">SOL LONG NECK:</label>
+<input type="text" id="produto_267" name="SOL LONG NECK" placeholder="quantidade">
+<br>
+<label for="produto_268">HEINEKEN LONG NECK:</label>
+<input type="text" id="produto_268" name="HEINEKEN LONG NECK" placeholder="quantidade">
+<br>
+<label for="produto_269">KAISER 600 ML:</label>
+<input type="text" id="produto_269" name="KAISER 600 ML" placeholder="quantidade">
+<br>
+<label for="produto_270">HEINEKEN 600:</label>
+<input type="text" id="produto_270" name="HEINEKEN 600" placeholder="quantidade">
+<br>
+<label for="produto_271">AMSTEL 600:</label>
+<input type="text" id="produto_271" name="AMSTEL 600" placeholder="quantidade">
+<br>
+<label for="produto_272">AMSTEL ULTRA:</label>
+<input type="text" id="produto_272" name="AMSTEL ULTRA" placeholder="quantidade">
+<br>
+<label for="produto_273">EISENBAH WEISS 355 ML:</label>
+<input type="text" id="produto_273" name="EISENBAH WEISS 355 ML" placeholder="quantidade">
+<br>
+<label for="produto_274">EISENBAH PALE ALE355 ML:</label>
+<input type="text" id="produto_274" name="EISENBAH PALE ALE355 ML" placeholder="quantidade">
+<br>
+<label for="produto_275">EISENBAH AMERICAN IPA 355 ML:</label>
+<input type="text" id="produto_275" name="EISENBAH AMERICAN IPA 355 ML" placeholder="quantidade">
+<br>
+<label for="produto_276">EISENBAH 600 pilsen:</label>
+<input type="text" id="produto_276" name="EISENBAH 600 pilsen" placeholder="quantidade">
+<br>
+<label for="produto_277">HEINEKEN ZERO LN:</label>
+<input type="text" id="produto_277" name="HEINEKEN ZERO LN" placeholder="quantidade">
+<br>
+<label for="produto_278">CHOPP:</label>
+<input type="text" id="produto_278" name="CHOPP" placeholder="quantidade">
+<br>
+<label for="produto_279">HEINEKKEN 30 LTROS:</label>
+<input type="text" id="produto_279" name="HEINEKKEN 30 LTROS" placeholder="quantidade">
+<br>
+<label for="produto_280">HEINEKEN 50 LTROS:</label>
+<input type="text" id="produto_280" name="HEINEKEN 50 LTROS" placeholder="quantidade">
+<br>
+<label for="produto_281">KAISER 30 LITROS:</label>
+<input type="text" id="produto_281" name="KAISER 30 LITROS" placeholder="quantidade">
+<br>
+<label for="produto_282">KAISER 50 LITROS:</label>
+<input type="text" id="produto_282" name="KAISER 50 LITROS" placeholder="quantidade">
+<br>
+<label for="produto_283">AMSTEL 30 LITROS:</label>
+<input type="text" id="produto_283" name="AMSTEL 30 LITROS" placeholder="quantidade">
+<br>
+<label for="produto_284">AMSTEL 50 LITROS:</label>
+<input type="text" id="produto_284" name="AMSTEL 50 LITROS" placeholder="quantidade">
+<br>
+<label for="produto_285">CHOPP TIGER 50 LITROS:</label>
+<input type="text" id="produto_285" name="CHOPP TIGER 50 LITROS" placeholder="quantidade">
+<br>
+<label for="produto_286">GUINESS:</label>
+<input type="text" id="produto_286" name="GUINESS" placeholder="quantidade">
+<br>
+<label for="produto_287">CHOP APA:</label>
+<input type="text" id="produto_287" name="CHOP APA" placeholder="quantidade">
+<br>
+<label for="produto_288">CHOP IPA:</label>
+<input type="text" id="produto_288" name="CHOP IPA" placeholder="quantidade">
+<br>
+<label for="produto_289">DEMAIS ITENS:</label>
+<input type="text" id="produto_289" name="DEMAIS ITENS" placeholder="quantidade">
+<br>
+<label for="produto_290">AGUA DE COCO COCO DO VALE 330ML:</label>
+<input type="text" id="produto_290" name="AGUA DE COCO COCO DO VALE 330ML" placeholder="quantidade">
+<br>
+<label for="produto_291">AGUA COCO 1 LT:</label>
+<input type="text" id="produto_291" name="AGUA COCO 1 LT" placeholder="quantidade">
+<br>
+<label for="produto_292">CHA FRUTAS VERMELHAS:</label>
+<input type="text" id="produto_292" name="CHA FRUTAS VERMELHAS" placeholder="quantidade">
+<br>
+<label for="produto_293">ENERGÉTICO RED BULL:</label>
+<input type="text" id="produto_293" name="ENERGÉTICO RED BULL" placeholder="quantidade">
+<br>
+<label for="produto_294">ENERGÉTICO RED BULL TROPICAL:</label>
+<input type="text" id="produto_294" name="ENERGÉTICO RED BULL TROPICAL" placeholder="quantidade">
+<br>
+<label for="produto_295">ENERGÉTICO RED BULL SUGAR FREE:</label>
+<input type="text" id="produto_295" name="ENERGÉTICO RED BULL SUGAR FREE" placeholder="quantidade">
+<br>
+<label for="produto_296">POLPAS:</label>
+<input type="text" id="produto_296" name="POLPAS" placeholder="quantidade">
+<br>
+<label for="produto_297">POLPA DE UVA:</label>
+<input type="text" id="produto_297" name="POLPA DE UVA" placeholder="quantidade">
+<br>
+<label for="produto_298">POLPA DE ACEROLA:</label>
+<input type="text" id="produto_298" name="POLPA DE ACEROLA" placeholder="quantidade">
+<br>
+<label for="produto_299">POLPA COCO:</label>
+<input type="text" id="produto_299" name="POLPA COCO" placeholder="quantidade">
+<br>
+<label for="produto_300">AMORA CONGELADA:</label>
+<input type="text" id="produto_300" name="AMORA CONGELADA" placeholder="quantidade">
+<br>
+<label for="produto_301">FRAMBOESA CONGELADA:</label>
+<input type="text" id="produto_301" name="FRAMBOESA CONGELADA" placeholder="quantidade">
+<br>
+<label for="produto_302">MORANGO CONGELADO:</label>
+<input type="text" id="produto_302" name="MORANGO CONGELADO" placeholder="quantidade">
+<br>
+<label for="produto_303">DESTILADOS:</label>
+<input type="text" id="produto_303" name="DESTILADOS" placeholder="quantidade">
+<br>
+<label for="produto_304">ABSOLUT:</label>
+<input type="text" id="produto_304" name="ABSOLUT" placeholder="quantidade">
+<br>
+<label for="produto_305">AMARETTO:</label>
+<input type="text" id="produto_305" name="AMARETTO" placeholder="quantidade">
+<br>
+<label for="produto_306">APEROL:</label>
+<input type="text" id="produto_306" name="APEROL" placeholder="quantidade">
+<br>
+<label for="produto_307">BAYLLEYS:</label>
+<input type="text" id="produto_307" name="BAYLLEYS" placeholder="quantidade">
+<br>
+<label for="produto_308">BACCO:</label>
+<input type="text" id="produto_308" name="BACCO" placeholder="quantidade">
+<br>
+<label for="produto_309">BACARDI CARTA BLANCA:</label>
+<input type="text" id="produto_309" name="BACARDI CARTA BLANCA" placeholder="quantidade">
+<br>
+<label for="produto_310">BANANINHA:</label>
+<input type="text" id="produto_310" name="BANANINHA" placeholder="quantidade">
+<br>
+<label for="produto_311">BAIANINHAA DE MORANGO:</label>
+<input type="text" id="produto_311" name="BAIANINHAA DE MORANGO" placeholder="quantidade">
+<br>
+<label for="produto_312">BAIANINHAA DE COCO:</label>
+<input type="text" id="produto_312" name="BAIANINHAA DE COCO" placeholder="quantidade">
+<br>
+<label for="produto_313">BAIANINHAA DE AMENDOIM:</label>
+<input type="text" id="produto_313" name="BAIANINHAA DE AMENDOIM" placeholder="quantidade">
+<br>
+<label for="produto_314">BAIANINHAA DE MARACUJA:</label>
+<input type="text" id="produto_314" name="BAIANINHAA DE MARACUJA" placeholder="quantidade">
+<br>
+<label for="produto_315">BITTER ANGOSTURA:</label>
+<input type="text" id="produto_315" name="BITTER ANGOSTURA" placeholder="quantidade">
+<br>
+<label for="produto_316">CIROC:</label>
+<input type="text" id="produto_316" name="CIROC" placeholder="quantidade">
+<br>
+<label for="produto_317">DREHER:</label>
+<input type="text" id="produto_317" name="DREHER" placeholder="quantidade">
+<br>
+<label for="produto_318">BRANDY DOMECQ:</label>
+<input type="text" id="produto_318" name="BRANDY DOMECQ" placeholder="quantidade">
+<br>
+<label for="produto_319">BRANDY MACIEIRA:</label>
+<input type="text" id="produto_319" name="BRANDY MACIEIRA" placeholder="quantidade">
+<br>
+<label for="produto_320">BULLEIT BOURBON:</label>
+<input type="text" id="produto_320" name="BULLEIT BOURBON" placeholder="quantidade">
+<br>
+<label for="produto_321">BITTER CAMPARI:</label>
+<input type="text" id="produto_321" name="BITTER CAMPARI" placeholder="quantidade">
+<br>
+<label for="produto_322">ESPUMANTE BRUTT:</label>
+<input type="text" id="produto_322" name="ESPUMANTE BRUTT" placeholder="quantidade">
+<br>
+<label for="produto_323">ESPUMANTE MOSCATEL:</label>
+<input type="text" id="produto_323" name="ESPUMANTE MOSCATEL" placeholder="quantidade">
+<br>
+<label for="produto_324">FIREBALL:</label>
+<input type="text" id="produto_324" name="FIREBALL" placeholder="quantidade">
+<br>
+<label for="produto_325">GORDONS:</label>
+<input type="text" id="produto_325" name="GORDONS" placeholder="quantidade">
+<br>
+<label for="produto_326">GIN BAG:</label>
+<input type="text" id="produto_326" name="GIN BAG" placeholder="quantidade">
+<br>
+<label for="produto_327">GIN DE PERA NIB:</label>
+<input type="text" id="produto_327" name="GIN DE PERA NIB" placeholder="quantidade">
+<br>
+<label for="produto_328">HAVANA 3 ANOS:</label>
+<input type="text" id="produto_328" name="HAVANA 3 ANOS" placeholder="quantidade">
+<br>
+<label for="produto_329">HAVANA 7 ANOS:</label>
+<input type="text" id="produto_329" name="HAVANA 7 ANOS" placeholder="quantidade">
+<br>
+<label for="produto_330">JACK DANIELS:</label>
+<input type="text" id="produto_330" name="JACK DANIELS" placeholder="quantidade">
+<br>
+<label for="produto_331">JACK DANIELS APPLE:</label>
+<input type="text" id="produto_331" name="JACK DANIELS APPLE" placeholder="quantidade">
+<br>
+<label for="produto_332">JACK DANIELS HONNEY:</label>
+<input type="text" id="produto_332" name="JACK DANIELS HONNEY" placeholder="quantidade">
+<br>
+<label for="produto_333">JACK DANIELS FIRE:</label>
+<input type="text" id="produto_333" name="JACK DANIELS FIRE" placeholder="quantidade">
+<br>
+<label for="produto_334">JAMENSON:</label>
+<input type="text" id="produto_334" name="JAMENSON" placeholder="quantidade">
+<br>
+<label for="produto_335">JOHNNIE WALKER RED:</label>
+<input type="text" id="produto_335" name="JOHNNIE WALKER RED" placeholder="quantidade">
+<br>
+<label for="produto_336">JOHNNIE WALKER BLACK:</label>
+<input type="text" id="produto_336" name="JOHNNIE WALKER BLACK" placeholder="quantidade">
+<br>
+<label for="produto_337">JOHNNIE WALKER BLONDIE:</label>
+<input type="text" id="produto_337" name="JOHNNIE WALKER BLONDIE" placeholder="quantidade">
+<br>
+<label for="produto_338">JOHNNIE WALKER GOLD:</label>
+<input type="text" id="produto_338" name="JOHNNIE WALKER GOLD" placeholder="quantidade">
+<br>
+<label for="produto_339">JAGERMEISTER:</label>
+<input type="text" id="produto_339" name="JAGERMEISTER" placeholder="quantidade">
+<br>
+<label for="produto_340">JOSÉ CUERVO OURO:</label>
+<input type="text" id="produto_340" name="JOSÉ CUERVO OURO" placeholder="quantidade">
+<br>
+<label for="produto_341">JOSÉ CUERVO PRATA:</label>
+<input type="text" id="produto_341" name="JOSÉ CUERVO PRATA" placeholder="quantidade">
+<br>
+<label for="produto_342">JURUPINGA:</label>
+<input type="text" id="produto_342" name="JURUPINGA" placeholder="quantidade">
+<br>
+<label for="produto_343">KETEL ONE:</label>
+<input type="text" id="produto_343" name="KETEL ONE" placeholder="quantidade">
+<br>
+<label for="produto_344">THE KRAKEN RUN:</label>
+<input type="text" id="produto_344" name="THE KRAKEN RUN" placeholder="quantidade">
+<br>
+<label for="produto_345">LICOR 43:</label>
+<input type="text" id="produto_345" name="LICOR 43" placeholder="quantidade">
+<br>
+<label for="produto_346">MALIBU:</label>
+<input type="text" id="produto_346" name="MALIBU" placeholder="quantidade">
+<br>
+<label for="produto_347">MARTINI ROSSO:</label>
+<input type="text" id="produto_347" name="MARTINI ROSSO" placeholder="quantidade">
+<br>
+<label for="produto_348">QUENTÃO 4,6LT:</label>
+<input type="text" id="produto_348" name="QUENTÃO 4,6LT" placeholder="quantidade">
+<br>
+<label for="produto_349">MARTINI ROSSO:</label>
+<input type="text" id="produto_349" name="MARTINI ROSSO" placeholder="quantidade">
+<br>
+<label for="produto_350">VODCA ORLOFF:</label>
+<input type="text" id="produto_350" name="VODCA ORLOFF" placeholder="quantidade">
+<br>
+<label for="produto_351">PRESIDENTE:</label>
+<input type="text" id="produto_351" name="PRESIDENTE" placeholder="quantidade">
+<br>
+<label for="produto_352">PISCO CAPEL 40:</label>
+<input type="text" id="produto_352" name="PISCO CAPEL 40" placeholder="quantidade">
+<br>
+<label for="produto_353">SAQUE SAKAI:</label>
+<input type="text" id="produto_353" name="SAQUE SAKAI" placeholder="quantidade">
+<br>
+<label for="produto_354">SAQUE BAG:</label>
+<input type="text" id="produto_354" name="SAQUE BAG" placeholder="quantidade">
+<br>
+<label for="produto_355">SEAGERS:</label>
+<input type="text" id="produto_355" name="SEAGERS" placeholder="quantidade">
+<br>
+<label for="produto_356">SMIRNOFF:</label>
+<input type="text" id="produto_356" name="SMIRNOFF" placeholder="quantidade">
+<br>
+<label for="produto_357">SMINORF ICE:</label>
+<input type="text" id="produto_357" name="SMINORF ICE" placeholder="quantidade">
+<br>
+<label for="produto_358">STEINHAEGER:</label>
+<input type="text" id="produto_358" name="STEINHAEGER" placeholder="quantidade">
+<br>
+<label for="produto_359">STOCK LICOR FINO:</label>
+<input type="text" id="produto_359" name="STOCK LICOR FINO" placeholder="quantidade">
+<br>
+<label for="produto_360">STOCK CAFÉ:</label>
+<input type="text" id="produto_360" name="STOCK CAFÉ" placeholder="quantidade">
+<br>
+<label for="produto_361">STOCK LICOR BLUE:</label>
+<input type="text" id="produto_361" name="STOCK LICOR BLUE" placeholder="quantidade">
+<br>
+<label for="produto_362">STOCK CURACAO RED:</label>
+<input type="text" id="produto_362" name="STOCK CURACAO RED" placeholder="quantidade">
+<br>
+<label for="produto_363">STOCK PESSEGO:</label>
+<input type="text" id="produto_363" name="STOCK PESSEGO" placeholder="quantidade">
+<br>
+<label for="produto_364">TANQUERAY DRY:</label>
+<input type="text" id="produto_364" name="TANQUERAY DRY" placeholder="quantidade">
+<br>
+<label for="produto_365">TANQUERAY FLOR DE SEVILHA:</label>
+<input type="text" id="produto_365" name="TANQUERAY FLOR DE SEVILHA" placeholder="quantidade">
+<br>
+<label for="produto_366">TANQUERAY TEN:</label>
+<input type="text" id="produto_366" name="TANQUERAY TEN" placeholder="quantidade">
+<br>
+<label for="produto_367">TEQUILA 1800 ANEJO:</label>
+<input type="text" id="produto_367" name="TEQUILA 1800 ANEJO" placeholder="quantidade">
+<br>
+<label for="produto_368">TEQUILA TRADICIONAL CUERVO:</label>
+<input type="text" id="produto_368" name="TEQUILA TRADICIONAL CUERVO" placeholder="quantidade">
+<br>
+<label for="produto_369">UNDEMBERG:</label>
+<input type="text" id="produto_369" name="UNDEMBERG" placeholder="quantidade">
+<br>
+<label for="produto_370">VELHO BARREIRO:</label>
+<input type="text" id="produto_370" name="VELHO BARREIRO" placeholder="quantidade">
+<br>
+<label for="produto_371">VERMUTE CINZANO ROSSO:</label>
+<input type="text" id="produto_371" name="VERMUTE CINZANO ROSSO" placeholder="quantidade">
+<br>
+<label for="produto_372">VINHO TINTO SUAVE GARRAFAO:</label>
+<input type="text" id="produto_372" name="VINHO TINTO SUAVE GARRAFAO" placeholder="quantidade">
+<br>
+<label for="produto_373">VINHO BRANCO SUAVE GARRAFAO:</label>
+<input type="text" id="produto_373" name="VINHO BRANCO SUAVE GARRAFAO" placeholder="quantidade">
+<br>
+<label for="produto_374">VINHO BRANGO BAG ( DA PIPA OU OLARIA):</label>
+<input type="text" id="produto_374" name="VINHO BRANGO BAG ( DA PIPA OU OLARIA)" placeholder="quantidade">
+<br>
+<label for="produto_375">VINHO ROSÊ BAG ( DA PIPA OU OLARIA):</label>
+<input type="text" id="produto_375" name="VINHO ROSÊ BAG ( DA PIPA OU OLARIA)" placeholder="quantidade">
+<br>
+<label for="produto_376">VINHO TINTO BAG ( VALE DOS CHELEIROS):</label>
+<input type="text" id="produto_376" name="VINHO TINTO BAG ( VALE DOS CHELEIROS)" placeholder="quantidade">
+<br>
+<label for="produto_377">VINHO VENTISQUEIRO MERLOT:</label>
+<input type="text" id="produto_377" name="VINHO VENTISQUEIRO MERLOT" placeholder="quantidade">
+<br>
+<label for="produto_378">VINHO VENTISQUEIRO CABERNET SAUVIGNON:</label>
+<input type="text" id="produto_378" name="VINHO VENTISQUEIRO CABERNET SAUVIGNON" placeholder="quantidade">
+<br>
+<label for="produto_379">VINHO VENTISQUEIRO CARMERNRRE:</label>
+<input type="text" id="produto_379" name="VINHO VENTISQUEIRO CARMERNRRE" placeholder="quantidade">
+<br>
+<label for="produto_380">VINHO VENTISQUEIRO RESERVA ROSE:</label>
+<input type="text" id="produto_380" name="VINHO VENTISQUEIRO RESERVA ROSE" placeholder="quantidade">
+<br>
+<label for="produto_381">WHISKEY BARATO(PARA COZ):</label>
+<input type="text" id="produto_381" name="WHISKEY BARATO(PARA COZ)" placeholder="quantidade">
+<br>
+<label for="produto_382">MALZIBIER 330ML (CERVEJA ESCURA):</label>
+<input type="text" id="produto_382" name="MALZIBIER 330ML (CERVEJA ESCURA)" placeholder="quantidade">
+<br>
+<label for="produto_383">XIBOQUINHA:</label>
+<input type="text" id="produto_383" name="XIBOQUINHA" placeholder="quantidade">
+<br>
+<label for="produto_384">CACHAÇAS PREMIUNS:</label>
+<input type="text" id="produto_384" name="CACHAÇAS PREMIUNS" placeholder="quantidade">
+<br>
+<label for="produto_385">SAGATIBA:</label>
+<input type="text" id="produto_385" name="SAGATIBA" placeholder="quantidade">
+<br>
+<label for="produto_386">SALINAS:</label>
+<input type="text" id="produto_386" name="SALINAS" placeholder="quantidade">
+<br>
+<label for="produto_387">SELETA:</label>
+<input type="text" id="produto_387" name="SELETA" placeholder="quantidade">
+<br>
+<label for="produto_388">SALIBOA:</label>
+<input type="text" id="produto_388" name="SALIBOA" placeholder="quantidade">
+<br>
+<label for="produto_389">CANARINHA:</label>
+<input type="text" id="produto_389" name="CANARINHA" placeholder="quantidade">
+<br>
+<label for="produto_390">BASSI ORO:</label>
+<input type="text" id="produto_390" name="BASSI ORO" placeholder="quantidade">
+<br>
+<label for="produto_391">CANABENTA:</label>
+<input type="text" id="produto_391" name="CANABENTA" placeholder="quantidade">
+<br>
+<label for="produto_392">CABARE AMBURAMA:</label>
+<input type="text" id="produto_392" name="CABARE AMBURAMA" placeholder="quantidade">
+<br>
+<label for="produto_393">CASA BUCCO VELHO ALAMBIQUE:</label>
+<input type="text" id="produto_393" name="CASA BUCCO VELHO ALAMBIQUE" placeholder="quantidade">
+<br>
+<label for="produto_394">CASA BUCCO ORO:</label>
+<input type="text" id="produto_394" name="CASA BUCCO ORO" placeholder="quantidade">
+<br>
+<label for="produto_395">JAMBU GENUINA:</label>
+<input type="text" id="produto_395" name="JAMBU GENUINA" placeholder="quantidade">
+<br>
+<label for="produto_396">PORTO MORRETES OURO:</label>
+<input type="text" id="produto_396" name="PORTO MORRETES OURO" placeholder="quantidade">
+<br>
+<label for="produto_397">PORTO MORRETES BANANA:</label>
+<input type="text" id="produto_397" name="PORTO MORRETES BANANA" placeholder="quantidade">
+<br>
+<label for="produto_398">ASA BRANCA:</label>
+<input type="text" id="produto_398" name="ASA BRANCA" placeholder="quantidade">
+<br>
+<label for="produto_399">DOMINA SUAVE:</label>
+<input type="text" id="produto_399" name="DOMINA SUAVE" placeholder="quantidade">
+<br>
+<label for="produto_400">VALE VERDE:</label>
+<input type="text" id="produto_400" name="VALE VERDE" placeholder="quantidade">
+<br>
+<label for="produto_401">GERMANA:</label>
+<input type="text" id="produto_401" name="GERMANA" placeholder="quantidade">
+<br>
+<label for="produto_402">CLAUDIONOR:</label>
+<input type="text" id="produto_402" name="CLAUDIONOR" placeholder="quantidade">
+<br>
+<label for="produto_403">SANTO GRAAL PRATA:</label>
+<input type="text" id="produto_403" name="SANTO GRAAL PRATA" placeholder="quantidade">
+<br>
+<label for="produto_404">SEGREDO DO PATRIARCA:</label>
+<input type="text" id="produto_404" name="SEGREDO DO PATRIARCA" placeholder="quantidade">
+<br>
+<label for="produto_405">VELHO ALAMBIQUE:</label>
+<input type="text" id="produto_405" name="VELHO ALAMBIQUE" placeholder="quantidade">
+<br>
+<label for="produto_406">WEBEE HAUSS MADEIRA:</label>
+<input type="text" id="produto_406" name="WEBEE HAUSS MADEIRA" placeholder="quantidade">
+<br>
+<label for="produto_407">BOAZINHA:</label>
+<input type="text" id="produto_407" name="BOAZINHA" placeholder="quantidade">
+<br>
+<label for="produto_408">CACHAÇA DAGA JAMBU:</label>
+<input type="text" id="produto_408" name="CACHAÇA DAGA JAMBU" placeholder="quantidade">
+<br>
+<label for="produto_409">CACHAÇA DAGA JABUTICABA:</label>
+<input type="text" id="produto_409" name="CACHAÇA DAGA JABUTICABA" placeholder="quantidade">
+<br>
+<label for="produto_410">CACHAÇA DAGA MEL LIMÃO:</label>
+<input type="text" id="produto_410" name="CACHAÇA DAGA MEL LIMÃO" placeholder="quantidade">
+<br>
+<label for="produto_411">CACHAÇA CARVALHO 8 ANOS:</label>
+<input type="text" id="produto_411" name="CACHAÇA CARVALHO 8 ANOS" placeholder="quantidade">
+<br>
+<label for="produto_412">CACHAÇA CABARE OURO:</label>
+<input type="text" id="produto_412" name="CACHAÇA CABARE OURO" placeholder="quantidade">
+<br>
+<label for="produto_413">CACHAÇA CAIÇARA PRATA:</label>
+<input type="text" id="produto_413" name="CACHAÇA CAIÇARA PRATA" placeholder="quantidade">
+<br>
+<label for="produto_414">CACHAÇA JABOTICABA MAIARA E MARAISA:</label>
+<input type="text" id="produto_414" name="CACHAÇA JABOTICABA MAIARA E MARAISA" placeholder="quantidade">
+<br>
+<label for="produto_415">XAROPES:</label>
+<input type="text" id="produto_415" name="XAROPES" placeholder="quantidade">
+<br>
+<label for="produto_416">MONIN ABACAXI:</label>
+<input type="text" id="produto_416" name="MONIN ABACAXI" placeholder="quantidade">
+<br>
+<label for="produto_417">AVELA:</label>
+<input type="text" id="produto_417" name="AVELA" placeholder="quantidade">
+<br>
+<label for="produto_418">MONIN BLUE:</label>
+<input type="text" id="produto_418" name="MONIN BLUE" placeholder="quantidade">
+<br>
+<label for="produto_419">CARAMELO SALGADO:</label>
+<input type="text" id="produto_419" name="CARAMELO SALGADO" placeholder="quantidade">
+<br>
+<label for="produto_420">CRAMBERRY:</label>
+<input type="text" id="produto_420" name="CRAMBERRY" placeholder="quantidade">
+<br>
+<label for="produto_421">FRAMBOESA:</label>
+<input type="text" id="produto_421" name="FRAMBOESA" placeholder="quantidade">
+<br>
+<label for="produto_422">GENGIBRE:</label>
+<input type="text" id="produto_422" name="GENGIBRE" placeholder="quantidade">
+<br>
+<label for="produto_423">GRENADINE:</label>
+<input type="text" id="produto_423" name="GRENADINE" placeholder="quantidade">
+<br>
+<label for="produto_424">MONIN KIWI:</label>
+<input type="text" id="produto_424" name="MONIN KIWI" placeholder="quantidade">
+<br>
+<label for="produto_425">LIMÃO SICILIANO:</label>
+<input type="text" id="produto_425" name="LIMÃO SICILIANO" placeholder="quantidade">
+<br>
+<label for="produto_426">MAÇÃ VERDE:</label>
+<input type="text" id="produto_426" name="MAÇÃ VERDE" placeholder="quantidade">
+<br>
+<label for="produto_427">MORANGO:</label>
+<input type="text" id="produto_427" name="MORANGO" placeholder="quantidade">
+<br>
+<label for="produto_428">MONIN ROMA:</label>
+<input type="text" id="produto_428" name="MONIN ROMA" placeholder="quantidade">
+<br>
+<label for="produto_429">MONIN PESSEGO:</label>
+<input type="text" id="produto_429" name="MONIN PESSEGO" placeholder="quantidade">
+<br>
+<label for="produto_430">PIPOCA:</label>
+<input type="text" id="produto_430" name="PIPOCA" placeholder="quantidade">
+<br>
+<label for="produto_431">TANGERINA:</label>
+<input type="text" id="produto_431" name="TANGERINA" placeholder="quantidade">
+<br>
+<label for="produto_432">TORANJA:</label>
+<input type="text" id="produto_432" name="TORANJA" placeholder="quantidade">
+<br>
+<label for="produto_433">MONIN VIOLETA:</label>
+<input type="text" id="produto_433" name="MONIN VIOLETA" placeholder="quantidade">
+<br>
+<label for="produto_434">XAROPE DE MARACUJA:</label>
+<input type="text" id="produto_434" name="XAROPE DE MARACUJA" placeholder="quantidade">
+<br>
+<label for="produto_435">XAROPE DE MELANCIA:</label>
+<input type="text" id="produto_435" name="XAROPE DE MELANCIA" placeholder="quantidade">
+<br>
+<label for="produto_436">MARACUJA:</label>
+<input type="text" id="produto_436" name="MARACUJA" placeholder="quantidade">
+<br>
+<label for="produto_437">XAROPE HIBISCO:</label>
+<input type="text" id="produto_437" name="XAROPE HIBISCO" placeholder="quantidade">
+<br>
+<label for="produto_438">XAROPE PURE DE MIRTILO:</label>
+<input type="text" id="produto_438" name="XAROPE PURE DE MIRTILO" placeholder="quantidade">
+<br>
+<label for="produto_439">XAROPE DE COCO:</label>
+<input type="text" id="produto_439" name="XAROPE DE COCO" placeholder="quantidade">
+<br>
+<label for="produto_440">XAROPE DE AMORA:</label>
+<input type="text" id="produto_440" name="XAROPE DE AMORA" placeholder="quantidade">
+<br>
+<label for="produto_441">PURE DE AMORA:</label>
+<input type="text" id="produto_441" name="PURE DE AMORA" placeholder="quantidade">
+<br>
+<label for="produto_442">PURE DE COCO:</label>
+<input type="text" id="produto_442" name="PURE DE COCO" placeholder="quantidade">
+<br>
+<label for="produto_443">PURE JABOTICABA:</label>
+<input type="text" id="produto_443" name="PURE JABOTICABA" placeholder="quantidade">
+<br>
+<label for="produto_444">XAROPE PURE DE KIWI:</label>
+<input type="text" id="produto_444" name="XAROPE PURE DE KIWI" placeholder="quantidade">
+<br>
+<label for="produto_445">PURE DE YUZU:</label>
+<input type="text" id="produto_445" name="PURE DE YUZU" placeholder="quantidade">
+<br>
+<label for="produto_446">PURE DE FRAMBOESA:</label>
+<input type="text" id="produto_446" name="PURE DE FRAMBOESA" placeholder="quantidade">
+<br>
+<label for="produto_447">EMBALAGENS E DESCARTÁVEIS:</label>
+<input type="text" id="produto_447" name="EMBALAGENS E DESCARTÁVEIS" placeholder="quantidade">
+<br>
+<label for="produto_448">ADESIVO LACRE PARA EMBALAGEM:</label>
+<input type="text" id="produto_448" name="ADESIVO LACRE PARA EMBALAGEM" placeholder="quantidade">
+<br>
+<label for="produto_449">BOBINA TERMICA:</label>
+<input type="text" id="produto_449" name="BOBINA TERMICA" placeholder="quantidade">
+<br>
+<label for="produto_450">BLOQUINHO DE COMANDA:</label>
+<input type="text" id="produto_450" name="BLOQUINHO DE COMANDA" placeholder="quantidade">
+<br>
+<label for="produto_451">CANUDO MEXEDOR P/DRINK:</label>
+<input type="text" id="produto_451" name="CANUDO MEXEDOR P/DRINK" placeholder="quantidade">
+<br>
+<label for="produto_452">CANUDO MILKSHAKE 21/8:</label>
+<input type="text" id="produto_452" name="CANUDO MILKSHAKE 21/8" placeholder="quantidade">
+<br>
+<label for="produto_453">CANUDO REFRIGERANTE 21/5 PRETO:</label>
+<input type="text" id="produto_453" name="CANUDO REFRIGERANTE 21/5 PRETO" placeholder="quantidade">
+<br>
+<label for="produto_454">CERA LÍQUIDA 750ML:</label>
+<input type="text" id="produto_454" name="CERA LÍQUIDA 750ML" placeholder="quantidade">
+<br>
+<label for="produto_455">COLHERZINHA COLORIDA PEQUENA OU TRANSP:</label>
+<input type="text" id="produto_455" name="COLHERZINHA COLORIDA PEQUENA OU TRANSP" placeholder="quantidade">
+<br>
+<label for="produto_456">COPO PLÁSTICO 330 ML:</label>
+<input type="text" id="produto_456" name="COPO PLÁSTICO 330 ML" placeholder="quantidade">
+<br>
+<label for="produto_457">COPO PLÁSTICO 550 ML:</label>
+<input type="text" id="produto_457" name="COPO PLÁSTICO 550 ML" placeholder="quantidade">
+<br>
+<label for="produto_458">EMBALAGEM NP 10:</label>
+<input type="text" id="produto_458" name="EMBALAGEM NP 10" placeholder="quantidade">
+<br>
+<label for="produto_459">EMBALAGEM NP 18:</label>
+<input type="text" id="produto_459" name="EMBALAGEM NP 18" placeholder="quantidade">
+<br>
+<label for="produto_460">EMBALAGEM DE ALUMINIO GR 1150:</label>
+<input type="text" id="produto_460" name="EMBALAGEM DE ALUMINIO GR 1150" placeholder="quantidade">
+<br>
+<label for="produto_461">EMBALAGEM DE ALUMINIO MD 500:</label>
+<input type="text" id="produto_461" name="EMBALAGEM DE ALUMINIO MD 500" placeholder="quantidade">
+<br>
+<label for="produto_462">EMBALAGEM DE ALUMINIO PQ 250 ML:</label>
+<input type="text" id="produto_462" name="EMBALAGEM DE ALUMINIO PQ 250 ML" placeholder="quantidade">
+<br>
+<label for="produto_463">EMBALAGEM PLASTICA 250ML:</label>
+<input type="text" id="produto_463" name="EMBALAGEM PLASTICA 250ML" placeholder="quantidade">
+<br>
+<label for="produto_464">ETIQUETA PARA VALIDADE ROLO:</label>
+<input type="text" id="produto_464" name="ETIQUETA PARA VALIDADE ROLO" placeholder="quantidade">
+<br>
+<label for="produto_465">POTE 75 GRAMAS COM TAMPA IFOOD:</label>
+<input type="text" id="produto_465" name="POTE 75 GRAMAS COM TAMPA IFOOD" placeholder="quantidade">
+<br>
+<label for="produto_466">BOM AR:</label>
+<input type="text" id="produto_466" name="BOM AR" placeholder="quantidade">
+<br>
+<label for="produto_467">MULTI USO LIMPZ:</label>
+<input type="text" id="produto_467" name="MULTI USO LIMPZ" placeholder="quantidade">
+<br>
+<label for="produto_468">EMBALAGEM DE HAMBURGER ISOPOR:</label>
+<input type="text" id="produto_468" name="EMBALAGEM DE HAMBURGER ISOPOR" placeholder="quantidade">
+<br>
+<label for="produto_469">FIBRAÇO C/5:</label>
+<input type="text" id="produto_469" name="FIBRAÇO C/5" placeholder="quantidade">
+<br>
+<label for="produto_470">FILME PVC 38x1000:</label>
+<input type="text" id="produto_470" name="FILME PVC 38x1000" placeholder="quantidade">
+<br>
+<label for="produto_471">FILME PVC 38x300:</label>
+<input type="text" id="produto_471" name="FILME PVC 38x300" placeholder="quantidade">
+<br>
+<label for="produto_472">FLANELA AMARELA UN:</label>
+<input type="text" id="produto_472" name="FLANELA AMARELA UN" placeholder="quantidade">
+<br>
+<label for="produto_473">FÓSFOROS LONGOS C/200 UN.:</label>
+<input type="text" id="produto_473" name="FÓSFOROS LONGOS C/200 UN." placeholder="quantidade">
+<br>
+<label for="produto_474">GARFO DESCARTÁVEL:</label>
+<input type="text" id="produto_474" name="GARFO DESCARTÁVEL" placeholder="quantidade">
+<br>
+<label for="produto_475">GUARDANAPO 33x33:</label>
+<input type="text" id="produto_475" name="GUARDANAPO 33x33" placeholder="quantidade">
+<br>
+<label for="produto_476">GURADANAPO EMBALADO:</label>
+<input type="text" id="produto_476" name="GURADANAPO EMBALADO" placeholder="quantidade">
+<br>
+<label for="produto_477">LIMPA ALUMINIO:</label>
+<input type="text" id="produto_477" name="LIMPA ALUMINIO" placeholder="quantidade">
+<br>
+<label for="produto_478">LIMPA VIDROS:</label>
+<input type="text" id="produto_478" name="LIMPA VIDROS" placeholder="quantidade">
+<br>
+<label for="produto_479">LUVA LATEX C/100:</label>
+<input type="text" id="produto_479" name="LUVA LATEX C/100" placeholder="quantidade">
+<br>
+<label for="produto_480">PALHETA PARA CAFÉ:</label>
+<input type="text" id="produto_480" name="PALHETA PARA CAFÉ" placeholder="quantidade">
+<br>
+<label for="produto_481">PALITO DENTAL BAMBU:</label>
+<input type="text" id="produto_481" name="PALITO DENTAL BAMBU" placeholder="quantidade">
+<br>
+<label for="produto_482">PANO MULTIUSO 30x300M PERFEX:</label>
+<input type="text" id="produto_482" name="PANO MULTIUSO 30x300M PERFEX" placeholder="quantidade">
+<br>
+<label for="produto_483">PANO PARA CHÃO:</label>
+<input type="text" id="produto_483" name="PANO PARA CHÃO" placeholder="quantidade">
+<br>
+<label for="produto_484">POTE C TAMPA 75ML IFOOD:</label>
+<input type="text" id="produto_484" name="POTE C TAMPA 75ML IFOOD" placeholder="quantidade">
+<br>
+<label for="produto_485">POTE 60 ML DIP:</label>
+<input type="text" id="produto_485" name="POTE 60 ML DIP" placeholder="quantidade">
+<br>
+<label for="produto_486">EMBALAGENS PERSONALISADAS:</label>
+<input type="text" id="produto_486" name="EMBALAGENS PERSONALISADAS" placeholder="quantidade">
+<br>
+<label for="produto_487">FUNDO DE BANDEJA:</label>
+<input type="text" id="produto_487" name="FUNDO DE BANDEJA" placeholder="quantidade">
+<br>
+<label for="produto_488">GUARDANAPO MUSTANG LOGO:</label>
+<input type="text" id="produto_488" name="GUARDANAPO MUSTANG LOGO" placeholder="quantidade">
+<br>
+<label for="produto_489">SACO PARA TALHER PLÁSTICO 6 X 25 C/1000:</label>
+<input type="text" id="produto_489" name="SACO PARA TALHER PLÁSTICO 6 X 25 C/1000" placeholder="quantidade">
+<br>
+<label for="produto_490">SACO PARA TALHER PLÁSTICO 8 X 25 C/1000:</label>
+<input type="text" id="produto_490" name="SACO PARA TALHER PLÁSTICO 8 X 25 C/1000" placeholder="quantidade">
+<br>
+<label for="produto_491">SACOLA PERSONALIZADA:</label>
+<input type="text" id="produto_491" name="SACOLA PERSONALIZADA" placeholder="quantidade">
+<br>
+<label for="produto_492">PRODUTOS DE LIMPEZA:</label>
+<input type="text" id="produto_492" name="PRODUTOS DE LIMPEZA" placeholder="quantidade">
+<br>
+<label for="produto_493">AGUA SANITÁRIA 5L:</label>
+<input type="text" id="produto_493" name="AGUA SANITÁRIA 5L" placeholder="quantidade">
+<br>
+<label for="produto_494">ALCOOL 70%:</label>
+<input type="text" id="produto_494" name="ALCOOL 70%" placeholder="quantidade">
+<br>
+<label for="produto_495">ALCOOL PARA RECHAUD 10KG:</label>
+<input type="text" id="produto_495" name="ALCOOL PARA RECHAUD 10KG" placeholder="quantidade">
+<br>
+<label for="produto_496">ALCOOL EM GEL GALÃO:</label>
+<input type="text" id="produto_496" name="ALCOOL EM GEL GALÃO" placeholder="quantidade">
+<br>
+<label for="produto_497">BORRIFADOR:</label>
+<input type="text" id="produto_497" name="BORRIFADOR" placeholder="quantidade">
+<br>
+<label for="produto_498">CLORADO:</label>
+<input type="text" id="produto_498" name="CLORADO" placeholder="quantidade">
+<br>
+<label for="produto_499">DESINFETANTE 5L:</label>
+<input type="text" id="produto_499" name="DESINFETANTE 5L" placeholder="quantidade">
+<br>
+<label for="produto_500">DESINCURUSTANTE:</label>
+<input type="text" id="produto_500" name="DESINCURUSTANTE" placeholder="quantidade">
+<br>
+<label for="produto_501">DETERGENTE PARA LOUÇA 5L:</label>
+<input type="text" id="produto_501" name="DETERGENTE PARA LOUÇA 5L" placeholder="quantidade">
+<br>
+<label for="produto_502">ESCOVA SANITARIA:</label>
+<input type="text" id="produto_502" name="ESCOVA SANITARIA" placeholder="quantidade">
+<br>
+<label for="produto_503">ESPONJA DUPLA FACE:</label>
+<input type="text" id="produto_503" name="ESPONJA DUPLA FACE" placeholder="quantidade">
+<br>
+<label for="produto_504">LUSTRA MOVEIS:</label>
+<input type="text" id="produto_504" name="LUSTRA MOVEIS" placeholder="quantidade">
+<br>
+<label for="produto_505">LUVAS DESCARTÁVEIS:</label>
+<input type="text" id="produto_505" name="LUVAS DESCARTÁVEIS" placeholder="quantidade">
+<br>
+<label for="produto_506">LUVA DE BORRACHA:</label>
+<input type="text" id="produto_506" name="LUVA DE BORRACHA" placeholder="quantidade">
+<br>
+<label for="produto_507">MÁSCARAS DESCARTÁVEIS:</label>
+<input type="text" id="produto_507" name="MÁSCARAS DESCARTÁVEIS" placeholder="quantidade">
+<br>
+<label for="produto_508">l:</label>
+<input type="text" id="produto_508" name="l" placeholder="quantidade">
+<br>
+<label for="produto_509">PAPEL HIGIÊNICO ROLÃO:</label>
+<input type="text" id="produto_509" name="PAPEL HIGIÊNICO ROLÃO" placeholder="quantidade">
+<br>
+<label for="produto_510">PAPEL TOALHA BOBINA:</label>
+<input type="text" id="produto_510" name="PAPEL TOALHA BOBINA" placeholder="quantidade">
+<br>
+<label for="produto_511">PAPEL TOALHA PARA DISEPENSE (GOLD):</label>
+<input type="text" id="produto_511" name="PAPEL TOALHA PARA DISEPENSE (GOLD)" placeholder="quantidade">
+<br>
+<label for="produto_512">RODO :</label>
+<input type="text" id="produto_512" name="RODO " placeholder="quantidade">
+<br>
+<label for="produto_513">ROLO ALUMÍNIO 30x100:</label>
+<input type="text" id="produto_513" name="ROLO ALUMÍNIO 30x100" placeholder="quantidade">
+<br>
+<label for="produto_514">ROLO ALUMÍNIO 45x65:</label>
+<input type="text" id="produto_514" name="ROLO ALUMÍNIO 45x65" placeholder="quantidade">
+<br>
+<label for="produto_515">SABONETE LIQUIDO PARA DISPENSE (GOLD):</label>
+<input type="text" id="produto_515" name="SABONETE LIQUIDO PARA DISPENSE (GOLD)" placeholder="quantidade">
+<br>
+<label for="produto_516">SABÃO EM PÓ:</label>
+<input type="text" id="produto_516" name="SABÃO EM PÓ" placeholder="quantidade">
+<br>
+<label for="produto_517">SACO DE LIXO 100 LT:</label>
+<input type="text" id="produto_517" name="SACO DE LIXO 100 LT" placeholder="quantidade">
+<br>
+<label for="produto_518">SACO DE LIXO 150 LT:</label>
+<input type="text" id="produto_518" name="SACO DE LIXO 150 LT" placeholder="quantidade">
+<br>
+<label for="produto_519">SACO DE LIXO 40 LT:</label>
+<input type="text" id="produto_519" name="SACO DE LIXO 40 LT" placeholder="quantidade">
+<br>
+<label for="produto_520">SACO LIXO 50 AZUL:</label>
+<input type="text" id="produto_520" name="SACO LIXO 50 AZUL" placeholder="quantidade">
+<br>
+<label for="produto_521">SACO PARA TALHER PLÁSTICO 6 X 25 C/1000:</label>
+<input type="text" id="produto_521" name="SACO PARA TALHER PLÁSTICO 6 X 25 C/1000" placeholder="quantidade">
+<br>
+<label for="produto_522">SACO PARA TALHER PLÁSTICO 8 X 25 C/1000:</label>
+<input type="text" id="produto_522" name="SACO PARA TALHER PLÁSTICO 8 X 25 C/1000" placeholder="quantidade">
+<br>
+<label for="produto_523">SUMAVEG PARA LIMPEZA VERDURAS:</label>
+<input type="text" id="produto_523" name="SUMAVEG PARA LIMPEZA VERDURAS" placeholder="quantidade">
+<br>
+<label for="produto_524">ETIQUETA N5:</label>
+<input type="text" id="produto_524" name="ETIQUETA N5" placeholder="quantidade">
+<br>
+<label for="produto_525">SACO PORCIONADOR 01 KG 18X30 C/ 100:</label>
+<input type="text" id="produto_525" name="SACO PORCIONADOR 01 KG 18X30 C/ 100" placeholder="quantidade">
+<br>
+<label for="produto_526">SACO PORCIONADOR 02 KG 23X34 C/ 100:</label>
+<input type="text" id="produto_526" name="SACO PORCIONADOR 02 KG 23X34 C/ 100" placeholder="quantidade">
+<br>
+<label for="produto_527">SUPORTE PARA TACOS PLASTICOS:</label>
+<input type="text" id="produto_527" name="SUPORTE PARA TACOS PLASTICOS" placeholder="quantidade">
+<br>
+<label for="produto_528">BOBINA PICOTADA 5 KG - 28x40 c/500:</label>
+<input type="text" id="produto_528" name="BOBINA PICOTADA 5 KG - 28x40 c/500" placeholder="quantidade">
+<br>
+<label for="produto_529">BOBINA PICOTADA 3 KG - 23x37 c/500:</label>
+<input type="text" id="produto_529" name="BOBINA PICOTADA 3 KG - 23x37 c/500" placeholder="quantidade">
+<br>
+<label for="produto_530">SACO PORCIONADOR 10KG REFORÇADO TRANSPARENTE:</label>
+<input type="text" id="produto_530" name="SACO PORCIONADOR 10KG REFORÇADO TRANSPARENTE" placeholder="quantidade">
+<br>
+<label for="produto_531">SACO PLÁSTICO PARA HOT DOG 11x20 C/100:</label>
+<input type="text" id="produto_531" name="SACO PLÁSTICO PARA HOT DOG 11x20 C/100" placeholder="quantidade">
+<br>
+<label for="produto_532">SACOLA KRAFT N5 32 X 37:</label>
+<input type="text" id="produto_532" name="SACOLA KRAFT N5 32 X 37" placeholder="quantidade">
+<br>
+<label for="produto_533">SACOLA IFOOD KRAFT 25KG:</label>
+<input type="text" id="produto_533" name="SACOLA IFOOD KRAFT 25KG" placeholder="quantidade">
+<br>
+<label for="produto_534">SACOLA PLÁSTICA 38x48 c/1000:</label>
+<input type="text" id="produto_534" name="SACOLA PLÁSTICA 38x48 c/1000" placeholder="quantidade">
+<br>
+<label for="produto_535">SACOLA PLÁSTICA 50x60 c/1000:</label>
+<input type="text" id="produto_535" name="SACOLA PLÁSTICA 50x60 c/1000" placeholder="quantidade">
+<br>
+<label for="produto_536">SUPORTE PARA TACOS PLASTICOS:</label>
+<input type="text" id="produto_536" name="SUPORTE PARA TACOS PLASTICOS" placeholder="quantidade">
+<br>
+<label for="produto_537">TOUCA DESCARTÁVEL BRANCA:</label>
+<input type="text" id="produto_537" name="TOUCA DESCARTÁVEL BRANCA" placeholder="quantidade">
+<br>
+<label for="produto_538">VASSOURA:</label>
+<input type="text" id="produto_538" name="VASSOURA" placeholder="quantidade">
+<br>
+<label for="produto_539">VELA ANIVERÁRIO ESTRELA:</label>
+<input type="text" id="produto_539" name="VELA ANIVERÁRIO ESTRELA" placeholder="quantidade">
+<br>
+<label for="produto_540">EMBALAGENS DA SELADORA:</label>
+<input type="text" id="produto_540" name="EMBALAGENS DA SELADORA" placeholder="quantidade">
+<br>
+<label for="produto_541">12003-embalagem PP 12153 Kent fácil 320 ml preta-:</label>
+<input type="text" id="produto_541" name="12003-embalagem PP 12153 Kent fácil 320 ml preta-" placeholder="quantidade">
+<br>
+<label for="produto_542">12006-embalagem PP 12154 Kent fácil 420 ml preto-:</label>
+<input type="text" id="produto_542" name="12006-embalagem PP 12154 Kent fácil 420 ml preto-" placeholder="quantidade">
+<br>
+<label for="produto_543">12018-embalagem PP 19155 Kent fácil 920 ml preto-:</label>
+<input type="text" id="produto_543" name="12018-embalagem PP 19155 Kent fácil 920 ml preto-" placeholder="quantidade">
+<br>
+<label for="produto_544">23195-embalagem PP Kent fácil 1500 ml preta-:</label>
+<input type="text" id="produto_544" name="23195-embalagem PP Kent fácil 1500 ml preta-" placeholder="quantidade">
+<br>
+<label for="produto_545">16057-Filme PP 160x200 transparente:</label>
+<input type="text" id="produto_545" name="16057-Filme PP 160x200 transparente" placeholder="quantidade">
+<br>
+<label for="produto_546">D & A:</label>
+<input type="text" id="produto_546" name="D & A" placeholder="quantidade">
+<br>
+<label for="produto_547">CLEAR MATIC PLUS:</label>
+<input type="text" id="produto_547" name="CLEAR MATIC PLUS" placeholder="quantidade">
+<br>
+<label for="produto_548">SANYX:</label>
+<input type="text" id="produto_548" name="SANYX" placeholder="quantidade">
+<br>
+<label for="produto_549">NEWTON:</label>
+<input type="text" id="produto_549" name="NEWTON" placeholder="quantidade">
+<br>
+<label for="produto_550">ESPUMA CLOR:</label>
+<input type="text" id="produto_550" name="ESPUMA CLOR" placeholder="quantidade">
+<br>
+<label for="produto_551">ALUMEX:</label>
+<input type="text" id="produto_551" name="ALUMEX" placeholder="quantidade">
+<br>
+<label for="produto_552">ALLCLEAR:</label>
+<input type="text" id="produto_552" name="ALLCLEAR" placeholder="quantidade">
+<br>
+<label for="produto_553">ESPUMANTE PARA DRINKS:</label>
+<input type="text" id="produto_553" name="ESPUMANTE PARA DRINKS" placeholder="quantidade">
+<br>
+<label for="produto_554">Embalagem de talher com logo:</label>
+<input type="text" id="produto_554" name="Embalagem de talher com logo" placeholder="quantidade">
+<br>
+<label for="produto_555">ramazzotti rosato:</label>
+<input type="text" id="produto_555" name="ramazzotti rosato" placeholder="quantidade">
+<br>
+<label for="produto_556">Embalagem de Hamburguer com logo:</label>
+<input type="text" id="produto_556" name="Embalagem de Hamburguer com logo" placeholder="quantidade">
+<br>
+<label for="produto_557">ALGODÃO DOCE:</label>
+<input type="text" id="produto_557" name="ALGODÃO DOCE" placeholder="quantidade">
+<br>
+        <button onclick="alert('Pedido enviado com sucesso!')">Avançar</button>
     </div>
 </body>
 </html>
