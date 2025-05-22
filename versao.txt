@@ -1,1 +1,1 @@
-Versão final ajustada com layout e links.
+Versão com login validado e fluxo loja > compras

@@ -1,1 +1,1 @@
-console.log('Service Worker ativo');
+console.log('Service Worker ativado');
