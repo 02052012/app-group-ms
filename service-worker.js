@@ -1,1 +1,1 @@
-self.addEventListener('install', () => console.log('Service Worker instalado'));
+console.log('Service Worker ativo');
