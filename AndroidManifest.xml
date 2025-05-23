@@ -1,12 +1,12 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.groupms.app">
+    package="com.groupms.pedido">
     <application
-        android:label="App Group MS"
+        android:label="Pedido Loja MS"
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
         <activity android:name=".MainActivity"
             android:configChanges="orientation|screenSize"
-            android:label="App Group MS">
+            android:label="Pedido Loja MS">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>

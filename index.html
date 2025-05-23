@@ -1,1 +1,95 @@
-<!-- Tela de login com validação -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Pedido Loja - Mobile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: Arial; padding: 20px; background: #f4f4f4; }
+        .container { background: white; padding: 20px; border-radius: 10px; max-width: 500px; margin: auto; }
+        h2 { text-align: center; color: #800000; }
+        label { font-weight: bold; }
+        input, select { padding: 8px; margin: 5px 0; }
+        button { background: #800000; color: white; border: none; padding: 12px; width: 100%; font-size: 16px; border-radius: 4px; margin-top: 20px; }
+    </style>
+    <script>
+        function enviarWhatsApp() {
+            let mensagem = "*Pedido da Loja*%0A";
+            const produtos = ['MOLHO BARBECUE *1,1 KG*', 'MAIONESE GRILL *1,1 KG*', 'MOLHO CAESAR *1,1 KG*', 'MOLHO CHIPOTLE *1,1 KG*', 'MOLHO BLUE CHEESE *1,1 KG*'];
+
+            produtos.forEach((prod, i) => {
+                const qtd = document.getElementById('qtd_' + i).value;
+                const unidade = document.getElementById('unit_' + i).value;
+                if (qtd) {
+                    mensagem += `${prod} - ${qtd} ${unidade}%0A`;
+                }
+            });
+
+            if (mensagem === "*Pedido da Loja*%0A") {
+                alert("Preencha pelo menos um produto.");
+                return;
+            }
+
+            window.open("https://wa.me/55SEUNUMEROAQUI?text=" + mensagem, '_blank');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Pedido da Loja</h2>
+        
+    <div style='margin-bottom:15px;'>
+        <label>MOLHO BARBECUE *1,1 KG*</label><br>
+        <input type="number" id="qtd_0" placeholder="Quantidade" style="width: 40%;"/>
+        <select id="unit_0">
+            <option value="un">un</option>
+            <option value="kg">kg</option>
+            <option value="cx">cx</option>
+        </select>
+    </div>
+    
+    <div style='margin-bottom:15px;'>
+        <label>MAIONESE GRILL *1,1 KG*</label><br>
+        <input type="number" id="qtd_1" placeholder="Quantidade" style="width: 40%;"/>
+        <select id="unit_1">
+            <option value="un">un</option>
+            <option value="kg">kg</option>
+            <option value="cx">cx</option>
+        </select>
+    </div>
+    
+    <div style='margin-bottom:15px;'>
+        <label>MOLHO CAESAR *1,1 KG*</label><br>
+        <input type="number" id="qtd_2" placeholder="Quantidade" style="width: 40%;"/>
+        <select id="unit_2">
+            <option value="un">un</option>
+            <option value="kg">kg</option>
+            <option value="cx">cx</option>
+        </select>
+    </div>
+    
+    <div style='margin-bottom:15px;'>
+        <label>MOLHO CHIPOTLE *1,1 KG*</label><br>
+        <input type="number" id="qtd_3" placeholder="Quantidade" style="width: 40%;"/>
+        <select id="unit_3">
+            <option value="un">un</option>
+            <option value="kg">kg</option>
+            <option value="cx">cx</option>
+        </select>
+    </div>
+    
+    <div style='margin-bottom:15px;'>
+        <label>MOLHO BLUE CHEESE *1,1 KG*</label><br>
+        <input type="number" id="qtd_4" placeholder="Quantidade" style="width: 40%;"/>
+        <select id="unit_4">
+            <option value="un">un</option>
+            <option value="kg">kg</option>
+            <option value="cx">cx</option>
+        </select>
+    </div>
+    
+        <button onclick="enviarWhatsApp()">Enviar Pedido</button>
+    </div>
+</body>
+</html>

@@ -1,5 +1,5 @@
 
-package com.groupms.app;
+package com.groupms.pedido;
 
 import android.app.Activity;
 import android.os.Bundle;
